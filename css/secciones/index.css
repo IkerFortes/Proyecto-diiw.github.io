@@ -219,13 +219,13 @@ details > summary::marker {
 
 .estrella {
   font-size: 1.875rem;
-  color: #012d3c;
+  color: #FF9800;
   cursor: pointer;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .estrella:hover {
-  color: #00455d;
+  color: #ffffff;
   transform: scale(1.2);
 }
 
