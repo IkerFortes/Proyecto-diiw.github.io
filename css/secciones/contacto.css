@@ -175,18 +175,19 @@ main {
 }
 
 .contacto a {
-  color: #3b96ff;
+  color: #ffffffc8;
   text-decoration: none;
 }
 
 .contacto a:hover {
-  background-color: #3b82f6;
+  background-color: #a8a8a8;
   color: #ffffff;
 }
 
 /* estilos botones */
 .boton-enviar,
-.boton-limpiar {
+.boton-limpiar,
+.boton-como-llegar {
   width: 13.75rem;
   padding: 0.625rem 1rem;
   border-radius: 0.625rem;
@@ -201,9 +202,9 @@ main {
 }
 
 .boton-enviar {
-  background-color: #ff5300;
-  color: #fff;
-  box-shadow: 0 0.375rem 1.125rem rgba(255, 83, 0, 0.12);
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 0.375rem 1.125rem rgba(16, 15, 15, 0.12);
 }
 .boton-enviar:hover,
 .boton-enviar:focus {
@@ -213,18 +214,34 @@ main {
 .boton-limpiar {
   background: transparent;
   border: 0.125rem solid rgba(255, 255, 255, 0.28);
-  color: #fff;
+  color: #ffffff;
 }
+
 .boton-limpiar:hover,
 .boton-limpiar:focus {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.08);
   transform: translateY(-0.1875rem);
 }
+
+.boton-como-llegar {
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+  background: transparent;
+  border: 0.125rem solid rgba(0, 0, 0, 0.28);
+  color: #000000;
+}
+
+.boton-como-llegar:hover,
+.boton-como-llegar:focus {
+  background: rgba(0, 0, 0, 0.08);
+  transform: translateY(-0.1875rem);
+}
+
 
 /* INFORMACION (lado derecho) */
 .informacion {
   grid-area: info;
-  background: #013a45;
+  background: #050607;
   color: white;
   padding: 1.25rem;
   border-radius: 1rem;

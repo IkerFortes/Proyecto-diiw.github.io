@@ -88,7 +88,8 @@
   }
 
   .boton-enviar,
-  .boton-limpiar {
+  .boton-limpiar,
+  .boton-como-llegar {
     width: auto;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -176,7 +177,8 @@
   }
 
   .boton-enviar,
-  .boton-limpiar {
+  .boton-limpiar,
+  .boton-como-llegar {
     width: 100%;
     max-width: 100%;
     padding: 0.75rem;
