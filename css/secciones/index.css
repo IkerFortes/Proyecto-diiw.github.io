@@ -94,8 +94,8 @@ details > summary::marker {
   margin-bottom: 2.5rem;
 }
 
-#servicios h2 {
-  font-size: 2rem;
+#servicios h3 {
+  font-size: 1.4rem;
   margin-bottom: 0.625rem;
   color: #ff5300;
 }
