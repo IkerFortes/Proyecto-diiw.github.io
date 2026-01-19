@@ -7,7 +7,7 @@
   font-size: 1.1rem;
   width: 13.125rem;
   margin: 0.625rem;
-  background-color: var(--accent, #ff5300);
+  background-color: var(--accent, #C44601);
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: #ffffff;
   text-align: center;
@@ -56,7 +56,7 @@
 
 /* Naranja para texto/acento */
 .naranja {
-  color: #ff6a1f;
+  color: #C44601;
 }
 
 /* ==========================================================

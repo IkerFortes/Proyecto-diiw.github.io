@@ -22,7 +22,7 @@ header {
   justify-content: center;
   margin-left: 0.625rem; /* 10px */
   background-color: white;
-  border: 0.25rem solid #ff7c01d8; /* 4px */
+  border: 0.25rem solid #C44601; /* 4px */
   border-radius: 0.625rem; /* 10px */
   transition: border-color 0.3s ease, filter 0.3s ease;
 }
@@ -92,18 +92,37 @@ header {
 .link {
   text-decoration: none;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 550;
   display: block;
 }
 
 /* Área de usuario (columna derecha) */
+/* El contenedor principal sigue igual */
 #usuario {
   grid-column: 3 / 4;
   height: var(--altura-encabezado);
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el enlace que ahora contiene la imagen y el texto */
+.link-usuario {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.perfil {
+  width: 40px;
+  height: 40px;
 }
 
 /* ===== FOOTER ===== */

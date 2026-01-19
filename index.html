@@ -29,9 +29,12 @@
       </a>
 
       <!-- Checkbox + label para menú móvil (checkbox-hack) -->
-      <input type="checkbox" id="menu-toggle" aria-label="Abrir menú" title="Menu">
+      <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="hamburger">
-        <span></span><span></span><span></span>
+        <span class="sr-only">Abrir menú de navegación</span>
+        <span></span>
+        <span></span>
+        <span></span>
       </label>
 
       <nav class="menu-principal">
@@ -43,10 +46,10 @@
         </ul>
       </nav>
       <div id="usuario">
-        <a href="./login.html" class="link">
-          <img src="./images/usuarios/Login.png" alt="imgLogin" class="perfil">
+        <a href="./login.html" class="link-usuario">
+          <img src="./images/usuarios/Login.png" alt="" class="perfil">
+          <span>INICIAR SESIÓN</span>
         </a>
-        <a href="login" class="link">INICIAR SESIÓN</a>
       </div>
     </header>
     <!-- 🌟 Sección principal o “hero” -->
