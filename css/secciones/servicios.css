@@ -179,13 +179,13 @@ main {
 }
 
 .nav-secundaria a {
-  color: #3b82f6;
+  color: #001D3D;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .nav-secundaria a:hover {
-  color: #1d4ed8;
+  color: #000000;
 }
 
 .info-extra ul {
@@ -226,8 +226,8 @@ main {
 }
 
 .btn-cta {
-  background: #3b82f6;
-  color: white;
+  background: #2563eb;
+  color: #ffffff;
   padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;

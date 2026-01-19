@@ -17,22 +17,22 @@
     <link rel="stylesheet" href="css/print.css" media="print" >
   </head>
   <body id="body-contacto">
+
     <header>
       <a href="./index.html">
         <div id="contenedor-logo">
           <img
-            src="./images/empresa/logo.png"
-            alt="Logo"
-            width="100"
-            id="logo"
-          >
+            src="./images/empresa/logo.png" alt="Logo_empresa"  width="100" id="logo">
         </div>
       </a>
 
       <!-- Checkbox + label para menú móvil (checkbox-hack) -->
-      <input type="checkbox" id="menu-toggle" aria-label="Abrir menú" >
-      <label for="menu-toggle" class="hamburger" aria-hidden="true">
-        <span></span><span></span><span></span>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">
+        <span class="sr-only">Abrir menú de navegación</span>
+        <span></span>
+        <span></span>
+        <span></span>
       </label>
 
       <nav class="menu-principal">
@@ -44,10 +44,10 @@
         </ul>
       </nav>
       <div id="usuario">
-        <a href="./mantenimiento.html" class="link"
-          ><img src="./images/usuarios/Login.png" alt="imgLogin" class="perfil"
-        ></a>
-        <a href="./mantenimiento.html" class="link">INICIAR SESIÓN</a>
+        <a href="./login.html" class="link-usuario">
+          <img src="./images/usuarios/Login.png" alt="" class="perfil">
+          <span>INICIAR SESIÓN</span>
+        </a>
       </div>
     </header>
 
@@ -241,7 +241,7 @@
         </section>
 
         <section class="footer-info">
-          <h4>© 2025 VendemosTuCoche</h4>
+          <h2>© 2025 VendemosTuCoche</h2>
           <p>Transacciones seguras, rápidas y sin estrés.</p>
           <nav class="footer-nav">
             <a href="aviso-legal.html">Aviso legal</a>
