@@ -21,8 +21,9 @@ main {
   justify-content: center;
   padding: 1.25rem;
   margin: 0 3.125rem 1.25rem 3.125rem;
-  background-color: #ff5e00;
-  color: white;
+  background-color: #0f172a;
+    color: #ffffff;
+  font-weight: 700;
   text-align: center;
   border-radius: 0.75rem;
   transition: transform 0.3s ease;
