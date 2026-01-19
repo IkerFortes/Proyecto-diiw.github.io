@@ -1,444 +1,455 @@
 <!DOCTYPE html>
 <html lang="es">
-  <!-- ENLACE DE SALTO -->
-  <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+  <!-- ENLACE DE SALTO --> <a href="#inicio" class="skip-link" role="link"
+    aria-label="Saltar al contenido principal">Saltar al contenido principal</a>
 
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="author" content="Iker Fortes" >
-    <meta
-      name="description"
-      content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente."
-    >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iker Fortes">
+    <meta name="description"
+      content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente.">
     <!-- Estilos e impresión -->
     <title>VendemosTuCoche - Servicios</title>
     <link rel="icon" href="./images/empresa/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/print.css" media="print">
     <link rel="stylesheet" href="css/mains/main-servicios.css">
-    <link rel="stylesheet" href="css/main.css" >
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/secciones/servicios.css">
     <link rel="stylesheet" href="css/responsive/servicios.css">
   </head>
-  <body id="servicios-body">
-    <header>
-      <a href="condiciones" title="condiciones">
-        <div id="contenedor-logo">
-          <img src="./images/empresa/logo.png" alt="Logo_empresa"  width="100" id="logo">
-        </div>
-      </a>
 
+  <body id="servicios-body">
+    <header role="banner"> <a href="condiciones" title="condiciones" aria-label="Ir a condiciones">
+        <div id="contenedor-logo" aria-labelledby="logo-desc"> <img src="./images/empresa/logo.png" alt="Logo_empresa"
+            width="100" id="logo"> </div>
+      </a>
       <!-- Checkbox + label para menú móvil (checkbox-hack) -->
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="hamburger">
+      <input type="checkbox" id="menu-toggle" aria-controls="menu-principal" aria-label="Alternar menú de navegación"
+        aria-expanded="false">
+      <label for="menu-toggle" class="hamburger" role="button" aria-controls="menu-principal" aria-pressed="false"
+        aria-label="Abrir o cerrar menú de navegación">
         <span class="sr-only">Abrir menú de navegación</span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </label>
 
-      <nav class="menu-principal">
-        <ul>
-          <li><a href="./index.html" class="link">INICIO</a></li>
-          <li><a href="#" class="link">SERVICIOS</a></li>
-          <li><a href="./mantenimiento.html" class="link">OPINIONES</a></li>
-          <li><a href="./contacto.html" class="link">CONTACTO</a></li>
+      <nav class="menu-principal" id="menu-principal" role="navigation" aria-label="Menú principal">
+        <ul role="list">
+          <li><a href="./index.html" class="link" aria-label="Ir a Inicio">INICIO</a></li>
+          <li><a href="#" class="link" aria-current="page" aria-label="Ir a Servicios">SERVICIOS</a></li>
+          <li><a href="./mantenimiento.html" class="link" aria-label="Ir a Opiniones">OPINIONES</a></li>
+          <li><a href="./contacto.html" class="link" aria-label="Ir a Contacto">CONTACTO</a></li>
         </ul>
       </nav>
-      <div id="usuario">
-        <a href="./login.html" class="link-usuario">
-          <img src="./images/usuarios/Login.png" alt="loginImage" class="perfil">
+      <div id="usuario" aria-live="polite">
+        <a href="./login.html" class="link-usuario" aria-label="Iniciar sesión en VendemosTuCoche">
+          <img src="./images/usuarios/Login.png" alt="" class="perfil" aria-hidden="true">
           <span>INICIAR SESIÓN</span>
         </a>
       </div>
     </header>
 
-    <aside class="aside-servicios">
-      <nav class="nav-secundaria">
-        <h3>Explora nuestros servicios</h3>
-        <ul>
-          <li><a href="#VendeTuCoche">Vende tu coche rápido</a></li>
-          <li><a href="#CompraConConfianza">Compra con confianza</a></li>
-          <li><a href="#FinanciaTuCoche">Financiación</a></li>
-          <li><a href="#Garantia">Garantía</a></li>
-          <li><a href="#PreguntasFrecuentes">Preguntas frecuentes</a></li>
+    <aside class="aside-servicios" role="complementary" aria-labelledby="aside-explora">
+      <nav class="nav-secundaria" role="navigation" aria-label="Navegación secundaria">
+        <h3 id="aside-explora">Explora nuestros servicios</h3>
+        <ul role="list">
+          <li><a href="#VendeTuCoche" aria-label="Ir a Vende tu coche rápido">Vende tu coche rápido</a></li>
+          <li><a href="#CompraConConfianza" aria-label="Ir a Compra con confianza">Compra con confianza</a></li>
+          <li><a href="#FinanciaTuCoche" aria-label="Ir a Financiación">Financiación</a></li>
+          <li><a href="#Garantia" aria-label="Ir a Garantía">Garantía</a></li>
+          <li><a href="#PreguntasFrecuentes" aria-label="Ir a Preguntas frecuentes">Preguntas frecuentes</a></li>
         </ul>
       </nav>
 
-      <section class="info-extra">
-        <h3>Por qué elegirnos</h3>
-        <ul>
-          <li>✅ Procesos 100% seguros</li>
-          <li>⚙️ Asesoría personalizada</li>
-          <li>🧾 Vehículos verificados</li>
-          <li>🚗 Garantía hasta 12 meses</li>
-          <li>🤝 Concesionarios certificados</li>
+      <section class="info-extra" role="region" aria-labelledby="porque-elegirnos">
+        <h3 id="porque-elegirnos">Por qué elegirnos</h3>
+        <ul role="list" aria-describedby="porque-elegirnos-desc">
+          <li><span aria-hidden="true">✅</span> Procesos 100% seguros</li>
+          <li><span aria-hidden="true">⚙️</span> Asesoría personalizada</li>
+          <li><span aria-hidden="true">🧾</span> Vehículos verificados</li>
+          <li><span aria-hidden="true">🚗</span> Garantía hasta 12 meses</li>
+          <li><span aria-hidden="true">🤝</span> Concesionarios certificados</li>
         </ul>
+        <p id="porque-elegirnos-desc" class="sr-only">Listado de ventajas y garantías del servicio.</p>
       </section>
     </aside>
-    <main>
-      <section class="hero-servicios">
+    <main role="main" aria-label="Contenido principal">
+      <section class="hero-servicios" role="region" aria-labelledby="inicio">
         <div class="hero-container" id="inicio">
-          <h1>Descubre nuestros servicios</h1>
-          <p>
+          <h1 id="h1-servicios">Descubre nuestros servicios</h1>
+          <p id="hero-desc">
             VendemosTuCoche te acompaña en cada paso: vender, comprar o financiar
             tu coche de forma rápida, segura y transparente.
           </p>
         </div>
-        <img src="./images/empresa/servicios.png" alt="Servicios">
+        <img src="./images/empresa/servicios.png" alt="Servicios" role="img" aria-describedby="hero-desc">
       </section>
-        <div id="servicios">
-          <article id="VendeTuCoche" class="servicio cristal-empañado">
-            <div class="cabecera">
-              <h2>¡Vende tu coche rápido y sin estrés!</h2>
-              <p>
-                ¿Quieres vender tu coche sin perder tiempo ni complicarte con
-                procesos interminables? Con nuestro servicio
-                <strong>“Vende tu coche rápido y sin estrés”</strong>, te ayudamos
-                a publicar tu vehículo de manera rápida,
-                <strong>sencilla y completamente segura</strong>, garantizando una
-                experiencia fluida desde el primer clic hasta la entrega final.
-              </p>
-            </div>
-            <details class="servicio-parte">
-              <summary>Asesoría personalizada en la creación del anuncio</summary>
-              <p>
-                Sabemos que un buen anuncio marca la diferencia. Nuestro equipo te
-                asesora paso a paso para que tu publicación destaque entre cientos
-                de ofertas. Te ayudamos a elegir las mejores fotos, redactar una
-                descripción atractiva y fijar un precio competitivo según el
-                mercado actual.
-              </p>
-            </details>
+      <div id="servicios">
+        <article id="VendeTuCoche" class="servicio cristal-empañado" role="region" aria-labelledby="h2-vende"
+          aria-describedby="desc-vende">
+          <div class="cabecera">
+            <h2 id="h2-vende">¡Vende tu coche rápido y sin estrés!</h2>
+            <p id="desc-vende">
+              ¿Quieres vender tu coche sin perder tiempo ni complicarte con
+              procesos interminables? Con nuestro servicio
+              <strong>“Vende tu coche rápido y sin estrés”</strong>, te ayudamos
+              a publicar tu vehículo de manera rápida,
+              <strong>sencilla y completamente segura</strong>, garantizando una
+              experiencia fluida desde el primer clic hasta la entrega final.
+            </p>
+          </div>
+          <details class="servicio-parte" id="vende-det1">
+            <summary id="vende-det1-sum" role="button" aria-controls="vende-det1-desc" aria-expanded="false">Asesoría
+              personalizada en la creación del anuncio</summary>
+            <p id="vende-det1-desc">
+              Sabemos que un buen anuncio marca la diferencia. Nuestro equipo te
+              asesora paso a paso para que tu publicación destaque entre cientos
+              de ofertas. Te ayudamos a elegir las mejores fotos, redactar una
+              descripción atractiva y fijar un precio competitivo según el
+              mercado actual.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Verificación completa del historial del vehículo</summary>
-              <p>
-                La confianza es clave en cualquier transacción. Por eso realizamos
-                una
-                <strong>verificación detallada del historial del coche</strong>,
-                comprobando kilometraje, mantenimiento, cargas, siniestros y más.
-                Así, los posibles compradores tienen total transparencia y tú
-                vendes con mayor credibilidad.
-              </p>
-            </details>
+          <details class="servicio-parte" id="vende-det2">
+            <summary id="vende-det2-sum" role="button" aria-controls="vende-det2-desc" aria-expanded="false">
+              Verificación completa del historial del vehículo</summary>
+            <p id="vende-det2-desc">
+              La confianza es clave en cualquier transacción. Por eso realizamos
+              una
+              <strong>verificación detallada del historial del coche</strong>,
+              comprobando kilometraje, mantenimiento, cargas, siniestros y más.
+              Así, los posibles compradores tienen total transparencia y tú
+              vendes con mayor credibilidad.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Chats protegidos entre comprador y vendedor</summary>
-              <p>
-                La seguridad de tus datos y conversaciones es nuestra prioridad.
-                Nuestro sistema de <strong>chats protegidos</strong> garantiza una
-                comunicación directa, privada y libre de fraudes, para que
-                negocies con tranquilidad y confianza.
-              </p>
-            </details>
+          <details class="servicio-parte" id="vende-det3">
+            <summary id="vende-det3-sum" role="button" aria-controls="vende-det3-desc" aria-expanded="false">Chats
+              protegidos entre comprador y vendedor</summary>
+            <p id="vende-det3-desc">
+              La seguridad de tus datos y conversaciones es nuestra prioridad.
+              Nuestro sistema de <strong>chats protegidos</strong> garantiza una
+              comunicación directa, privada y libre de fraudes, para que
+              negocies con tranquilidad y confianza.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>
-                Venta rápida con ofertas de concesionarios certificados
-              </summary>
-              <p>
-                Si prefieres una venta inmediata, ponemos tu coche a disposición
-                de una red de <strong>concesionarios certificados</strong>, que
-                enviarán ofertas seguras y competitivas en cuestión de horas.
-              </p>
-              <p>
-                Tú eliges la propuesta que más te convenga, sin presiones ni
-                riesgos.
-              </p>
-            </details>
-          </article>
+          <details class="servicio-parte" id="vende-det4">
+            <summary id="vende-det4-sum" role="button" aria-controls="vende-det4-desc" aria-expanded="false">
+              Venta rápida con ofertas de concesionarios certificados
+            </summary>
+            <p id="vende-det4-desc">
+              Si prefieres una venta inmediata, ponemos tu coche a disposición
+              de una red de <strong>concesionarios certificados</strong>, que
+              enviarán ofertas seguras y competitivas en cuestión de horas.
+            </p>
+            <p id="vende-det4-desc-2">
+              Tú eliges la propuesta que más te convenga, sin presiones ni
+              riesgos.
+            </p>
+          </details>
+        </article>
 
-          <article class="servicio cristal-empañado" id="CompraConConfianza">
-            <div class="cabecera">
-              <h2>¡Compra con Confianza!</h2>
-              <p>
-                Comprar un coche de segunda mano no tiene por qué ser un riesgo.
-                Con nuestro servicio <strong>“Compra con Confianza”</strong>, te
-                ayudamos a encontrar vehículos
-                <strong
-                  >verificados, con garantía y financiación a tu medida</strong
-                >, para que tomes la mejor decisión sin preocupaciones.
-              </p>
-            </div>
-            <details class="servicio-parte">
-              <summary>Informe técnico detallado y fotografías reales</summary>
-              <p>
-                Cada coche publicado pasa por una revisión técnica completa, donde
-                verificamos su estado mecánico, historial de mantenimiento y
-                posibles reparaciones. Además, solo mostramos
-                <strong>fotografías reales y actualizadas</strong>, para que veas
-                exactamente lo que vas a comprar, sin sorpresas.
-              </p>
-            </details>
+        <article class="servicio cristal-empañado" id="CompraConConfianza" role="region" aria-labelledby="h2-compra"
+          aria-describedby="desc-compra">
+          <div class="cabecera">
+            <h2 id="h2-compra">¡Compra con Confianza!</h2>
+            <p id="desc-compra">
+              Comprar un coche de segunda mano no tiene por qué ser un riesgo.
+              Con nuestro servicio <strong>“Compra con Confianza”</strong>, te
+              ayudamos a encontrar vehículos
+              <strong>verificados, con garantía y financiación a tu medida</strong>,
+              para que tomes la mejor decisión sin preocupaciones.
+            </p>
+          </div>
+          <details class="servicio-parte" id="compra-det1">
+            <summary id="compra-det1-sum" role="button" aria-controls="compra-det1-desc" aria-expanded="false">Informe
+              técnico detallado y fotografías reales</summary>
+            <p id="compra-det1-desc">
+              Cada coche publicado pasa por una revisión técnica completa, donde
+              verificamos su estado mecánico, historial de mantenimiento y
+              posibles reparaciones. Además, solo mostramos
+              <strong>fotografías reales y actualizadas</strong>, para que veas
+              exactamente lo que vas a comprar, sin sorpresas.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Reserva online del vehículo</summary>
-              <p>
-                ¿Encontraste el coche ideal? No lo dejes escapar. Con nuestra
-                <strong>reserva online segura</strong>, puedes apartarlo
-                fácilmente mientras concretas los detalles de la compra o visitas
-                al concesionario. Rápido, transparente y sin intermediarios
-                ocultos.
-              </p>
-            </details>
+          <details class="servicio-parte" id="compra-det2">
+            <summary id="compra-det2-sum" role="button" aria-controls="compra-det2-desc" aria-expanded="false">Reserva
+              online del vehículo</summary>
+            <p id="compra-det2-desc">
+              ¿Encontraste el coche ideal? No lo dejes escapar. Con nuestra
+              <strong>reserva online segura</strong>, puedes apartarlo
+              fácilmente mientras concretas los detalles de la compra o visitas
+              al concesionario. Rápido, transparente y sin intermediarios
+              ocultos.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Financiación personalizada</summary>
-              <p>
-                Trabajamos con distintas entidades para ofrecerte
-                <strong>planes de financiación flexibles</strong>, adaptados a tu
-                presupuesto y tus necesidades. Tú eliges las cuotas y el plazo:
-                nosotros nos encargamos del resto.
-              </p>
-            </details>
+          <details class="servicio-parte" id="compra-det3">
+            <summary id="compra-det3-sum" role="button" aria-controls="compra-det3-desc" aria-expanded="false">
+              Financiación personalizada</summary>
+            <p id="compra-det3-desc">
+              Trabajamos con distintas entidades para ofrecerte
+              <strong>planes de financiación flexibles</strong>, adaptados a tu
+              presupuesto y tus necesidades. Tú eliges las cuotas y el plazo:
+              nosotros nos encargamos del resto.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Garantía de hasta 12 meses</summary>
-              <p>
-                Tu tranquilidad es nuestra prioridad. Todos los vehículos
-                disponibles cuentan con
-                <strong>garantía de hasta 12 meses</strong>, respaldada por
-                talleres y concesionarios certificados. Así, conduces con la
-                confianza de que estás protegido ante cualquier imprevisto.
-              </p>
-              <p>
-                Tú eliges la propuesta que más te convenga, sin presiones ni
-                riesgos.
-              </p>
-            </details>
-          </article>
+          <details class="servicio-parte" id="compra-det4">
+            <summary id="compra-det4-sum" role="button" aria-controls="compra-det4-desc" aria-expanded="false">Garantía
+              de hasta 12 meses</summary>
+            <p id="compra-det4-desc">
+              Tu tranquilidad es nuestra prioridad. Todos los vehículos
+              disponibles cuentan con
+              <strong>garantía de hasta 12 meses</strong>, respaldada por
+              talleres y concesionarios certificados. Así, conduces con la
+              confianza de que estás protegido ante cualquier imprevisto.
+            </p>
+            <p id="compra-det4-desc-2">
+              Tú eliges la propuesta que más te convenga, sin presiones ni
+              riesgos.
+            </p>
+          </details>
+        </article>
 
-          <article class="servicio cristal-empañado" id="FinanciaTuCoche">
-            <div class="cabecera">
-              <h2>¡Financia tu coche fácilmente!</h2>
-              <p>
-                Sabemos que comprar un coche es una gran decisión. Por eso, con
-                nuestro servicio de <strong>financiación personalizada</strong>,
-                te ayudamos a conseguir el vehículo que deseas sin complicaciones,
-                con cuotas flexibles, condiciones claras y asesoría durante todo
-                el proceso.
-              </p>
-            </div>
+        <article class="servicio cristal-empañado" id="FinanciaTuCoche" role="region" aria-labelledby="h2-financia"
+          aria-describedby="desc-financia">
+          <div class="cabecera">
+            <h2 id="h2-financia">¡Financia tu coche fácilmente!</h2>
+            <p id="desc-financia">
+              Sabemos que comprar un coche es una gran decisión. Por eso, con
+              nuestro servicio de <strong>financiación personalizada</strong>,
+              te ayudamos a conseguir el vehículo que deseas sin complicaciones,
+              con cuotas flexibles, condiciones claras y asesoría durante todo
+              el proceso.
+            </p>
+          </div>
 
-            <details class="servicio-parte">
-              <summary>Planes a tu medida</summary>
-              <p>
-                Analizamos tus necesidades y te ofrecemos
-                <strong>opciones de pago adaptadas a tu situación</strong>. Ya sea
-                a corto o largo plazo, tú eliges el ritmo que mejor se ajuste a tu
-                presupuesto, sin comisiones ocultas ni cláusulas confusas.
-              </p>
-            </details>
+          <details class="servicio-parte" id="fin-det1">
+            <summary id="fin-det1-sum" role="button" aria-controls="fin-det1-desc" aria-expanded="false">Planes a tu
+              medida</summary>
+            <p id="fin-det1-desc">
+              Analizamos tus necesidades y te ofrecemos
+              <strong>opciones de pago adaptadas a tu situación</strong>. Ya sea
+              a corto o largo plazo, tú eliges el ritmo que mejor se ajuste a tu
+              presupuesto, sin comisiones ocultas ni cláusulas confusas.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Colaboración con entidades de confianza</summary>
-              <p>
-                Trabajamos junto a
-                <strong>bancos y financieras reconocidas</strong> para
-                garantizarte las mejores condiciones del mercado. Así, obtienes un
-                préstamo transparente, competitivo y totalmente seguro.
-              </p>
-            </details>
+          <details class="servicio-parte" id="fin-det2">
+            <summary id="fin-det2-sum" role="button" aria-controls="fin-det2-desc" aria-expanded="false">Colaboración
+              con entidades de confianza</summary>
+            <p id="fin-det2-desc">
+              Trabajamos junto a
+              <strong>bancos y financeiras reconocidas</strong> para
+              garantizarte las mejores condiciones del mercado. Así, obtienes un
+              préstamo transparente, competitivo y totalmente seguro.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Simulación y aprobación online</summary>
-              <p>
-                Ahorra tiempo con nuestro sistema de
-                <strong>simulación y aprobación en línea</strong>. Calcula tus
-                cuotas, revisa las condiciones y envía tu solicitud sin moverte de
-                casa. Recibirás una respuesta en menos de 24 horas.
-              </p>
-            </details>
+          <details class="servicio-parte" id="fin-det3">
+            <summary id="fin-det3-sum" role="button" aria-controls="fin-det3-desc" aria-expanded="false">Simulación y
+              aprobación online</summary>
+            <p id="fin-det3-desc">
+              Ahorra tiempo con nuestro sistema de
+              <strong>simulación y aprobación en línea</strong>. Calcula tus
+              cuotas, revisa las condiciones y envía tu solicitud sin moverte de
+              casa. Recibirás una respuesta en menos de 24 horas.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Asesoría personalizada en todo momento</summary>
-              <p>
-                Nuestro equipo te acompaña desde el primer paso hasta la firma
-                final. Resolveremos tus dudas, revisaremos contigo las opciones y
-                te ayudaremos a elegir la mejor financiación posible, siempre con
-                <strong>transparencia y sin presión</strong>.
-              </p>
-              <p>
-                Porque comprar tu coche debe ser una experiencia segura, sencilla
-                y hecha a tu medida.
-              </p>
-            </details>
-          </article>
+          <details class="servicio-parte" id="fin-det4">
+            <summary id="fin-det4-sum" role="button" aria-controls="fin-det4-desc" aria-expanded="false">Asesoría
+              personalizada en todo momento</summary>
+            <p id="fin-det4-desc">
+              Nuestro equipo te acompaña desde el primer paso hasta la firma
+              final. Resolveremos tus dudas, revisaremos contigo las opciones y
+              te ayudaremos a elegir la mejor financiación posible, siempre con
+              <strong>transparencia y sin presión</strong>.
+            </p>
+            <p id="fin-det4-desc-2">
+              Porque comprar tu coche debe ser una experiencia segura, sencilla
+              y hecha a tu medida.
+            </p>
+          </details>
+        </article>
 
-          <!-- SECCIÓN GARANTÍA -->
-          <article id="Garantia" class="servicio cristal-empañado">
-            <div class="cabecera">
-              <h2>Tu tranquilidad está garantizada</h2>
-              <p>
-                En <strong>Vendemos tu coche</strong> sabemos que vender o comprar
-                un vehículo implica confianza. Por eso ofrecemos una
-                <strong>garantía total de satisfacción</strong>
-                que protege tanto a vendedores como a compradores durante todo el
-                proceso.
-              </p>
-            </div>
+        <!-- SECCIÓN GARANTÍA -->
+        <article id="Garantia" class="servicio cristal-empañado" role="region" aria-labelledby="h2-garantia"
+          aria-describedby="desc-garantia">
+          <div class="cabecera">
+            <h2 id="h2-garantia">Tu tranquilidad está garantizada</h2>
+            <p id="desc-garantia">
+              En <strong>Vendemos tu coche</strong> sabemos que vender o comprar
+              un vehículo implica confianza. Por eso ofrecemos una
+              <strong>garantía total de satisfacción</strong>
+              que protege tanto a vendedores como a compradores durante todo el
+              proceso.
+            </p>
+          </div>
 
-            <details class="servicio-parte">
-              <summary>Revisión técnica previa a la venta</summary>
-              <p>
-                Cada vehículo publicado pasa por una
-                <strong>revisión técnica completa</strong>
-                realizada por nuestros expertos. Verificamos el estado mecánico,
-                eléctrico y estético del coche, para que los compradores sepan
-                exactamente lo que adquieren.
-              </p>
-            </details>
+          <details class="servicio-parte" id="gar-det1">
+            <summary id="gar-det1-sum" role="button" aria-controls="gar-det1-desc" aria-expanded="false">Revisión
+              técnica previa a la venta</summary>
+            <p id="gar-det1-desc">
+              Cada vehículo publicado pasa por una
+              <strong>revisión técnica completa</strong>
+              realizada por nuestros expertos. Verificamos el estado mecánico,
+              eléctrico y estético del coche, para que los compradores sepan
+              exactamente lo que adquieren.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Garantía postventa opcional</summary>
-              <p>
-                Ofrecemos una
-                <strong>garantía postventa de hasta 12 meses</strong> que cubre
-                componentes clave del vehículo. Esta opción brinda mayor seguridad
-                al comprador y aumenta el valor de tu coche en el mercado.
-              </p>
-            </details>
+          <details class="servicio-parte" id="gar-det2">
+            <summary id="gar-det2-sum" role="button" aria-controls="gar-det2-desc" aria-expanded="false">Garantía
+              postventa opcional</summary>
+            <p id="gar-det2-desc">
+              Ofrecemos una
+              <strong>garantía postventa de hasta 12 meses</strong> que cubre
+              componentes clave del vehículo. Esta opción brinda mayor seguridad
+              al comprador y aumenta el valor de tu coche en el mercado.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>Protección contra fraudes y estafas</summary>
-              <p>
-                Implementamos un sistema de
-                <strong>verificación de identidad y fondos</strong>
-                en todas las transacciones, asegurando operaciones transparentes,
-                legales y libres de riesgos.
-              </p>
-            </details>
-          </article>
+          <details class="servicio-parte" id="gar-det3">
+            <summary id="gar-det3-sum" role="button" aria-controls="gar-det3-desc" aria-expanded="false">Protección
+              contra fraudes y estafas</summary>
+            <p id="gar-det3-desc">
+              Implementamos un sistema de
+              <strong>verificación de identidad y fondos</strong>
+              en todas las transacciones, asegurando operaciones transparentes,
+              legales y libres de riesgos.
+            </p>
+          </details>
+        </article>
 
-          <!-- SECCIÓN PREGUNTAS FRECUENTES -->
-          <article id="PreguntasFrecuentes" class="servicio cristal-empañado">
-            <div class="cabecera">
-              <h2>Preguntas frecuentes</h2>
-              <p>
-                ¿Tienes dudas sobre cómo funciona nuestro servicio? Aquí
-                respondemos a las
-                <strong>preguntas más comunes</strong> para que tengas toda la
-                información antes de vender tu coche.
-              </p>
-            </div>
+        <!-- SECCIÓN PREGUNTAS FRECUENTES -->
+        <article id="PreguntasFrecuentes" class="servicio cristal-empañado" role="region" aria-labelledby="h2-faq"
+          aria-describedby="desc-faq">
+          <div class="cabecera">
+            <h2 id="h2-faq">Preguntas frecuentes</h2>
+            <p id="desc-faq">
+              ¿Tienes dudas sobre cómo funciona nuestro servicio? Aquí
+              respondemos a las
+              <strong>preguntas más comunes</strong> para que tengas toda la
+              información antes de vender tu coche.
+            </p>
+          </div>
 
-            <details class="servicio-parte">
-              <summary>¿Cuánto tiempo tarda en venderse mi coche?</summary>
-              <p>
-                En promedio, las ventas se completan en menos de
-                <strong>7 días</strong>. Si eliges la opción de venta directa a
-                concesionarios certificados, puedes recibir ofertas en solo
-                <strong>24 horas</strong>.
-              </p>
-            </details>
+          <details class="servicio-parte" id="faq-det1">
+            <summary id="faq-det1-sum" role="button" aria-controls="faq-det1-desc" aria-expanded="false">¿Cuánto tiempo
+              tarda en venderse mi coche?</summary>
+            <p id="faq-det1-desc">
+              En promedio, las ventas se completan en menos de
+              <strong>7 días</strong>. Si eliges la opción de venta directa a
+              concesionarios certificados, puedes recibir ofertas en solo
+              <strong>24 horas</strong>.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>¿Tiene algún coste publicar mi coche?</summary>
-              <p>
-                La publicación es <strong>completamente gratuita</strong>. Solo
-                aplicamos una pequeña comisión si el coche se vende a través de
-                nuestra plataforma o red de concesionarios.
-              </p>
-            </details>
+          <details class="servicio-parte" id="faq-det2">
+            <summary id="faq-det2-sum" role="button" aria-controls="faq-det2-desc" aria-expanded="false">¿Tiene algún
+              coste publicar mi coche?</summary>
+            <p id="faq-det2-desc">
+              La publicación es <strong>completamente gratuita</strong>. Solo
+              aplicamos una pequeña comisión si el coche se vende a través de
+              nuestra plataforma o red de concesionarios.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>¿Puedo retirar mi anuncio en cualquier momento?</summary>
-              <p>
-                Sí, puedes eliminar tu anuncio
-                <strong>cuando quieras</strong> desde tu área personal, sin
-                penalizaciones ni costes adicionales.
-              </p>
-            </details>
+          <details class="servicio-parte" id="faq-det3">
+            <summary id="faq-det3-sum" role="button" aria-controls="faq-det3-desc" aria-expanded="false">¿Puedo retirar
+              mi anuncio en cualquier momento?</summary>
+            <p id="faq-det3-desc">
+              Sí, puedes eliminar tu anuncio
+              <strong>cuando quieras</strong> desde tu área personal, sin
+              penalizaciones ni costes adicionales.
+            </p>
+          </details>
 
-            <details class="servicio-parte">
-              <summary>¿Qué tipo de coches puedo vender?</summary>
-              <p>
-                Aceptamos <strong>todo tipo de vehículos</strong>: turismos, SUV,
-                furgonetas y eléctricos. Solo deben contar con la documentación al
-                día y pasar nuestra verificación inicial.
-              </p>
-            </details>
-          </article>
-        </div>
-      <section class="cta-servicios">
-        <h2>¿Listo para empezar?</h2>
-        <p>
+          <details class="servicio-parte" id="faq-det4">
+            <summary id="faq-det4-sum" role="button" aria-controls="faq-det4-desc" aria-expanded="false">¿Qué tipo de
+              coches puedo vender?</summary>
+            <p id="faq-det4-desc">
+              Aceptamos <strong>todo tipo de vehículos</strong>: turismos, SUV,
+              furgonetas y eléctricos. Solo deben contar con la documentación al
+              día y pasar nuestra verificación inicial.
+            </p>
+          </details>
+        </article>
+      </div>
+      <section class="cta-servicios" role="region" aria-labelledby="cta-title" aria-describedby="cta-desc">
+        <h2 id="cta-title">¿Listo para empezar?</h2>
+        <p id="cta-desc">
           Regístrate gratis y obtén asesoría personalizada para vender o comprar
           tu coche hoy mismo.
         </p>
-        <a href="./mantenimiento.html" class="btn-cta">🚀 Empezar ahora</a>
+        <a href="./mantenimiento.html" class="btn-cta" role="button" aria-label="Empezar ahora - registrarse">🚀 Empezar
+          ahora</a>
       </section>
     </main>
 
     <!-- ⚙️ Pie de página -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo" aria-labelledby="footer-title">
       <div class="footer-contenido">
-        <section class="footer-soporte">
-          <h3>¿Necesitas ayuda?</h3>
-          <p>
+        <section class="footer-soporte" role="region" aria-labelledby="soporte-title" aria-describedby="soporte-desc">
+          <h3 id="soporte-title">¿Necesitas ayuda?</h3>
+          <p id="soporte-desc">
             Estamos aquí para resolver tus dudas y acompañarte durante todo el
             proceso.
           </p>
 
-          <ul class="footer-contacto">
+          <ul class="footer-contacto" role="list" aria-label="Información de contacto">
             <li>
               📞 <strong>Teléfono / WhatsApp:</strong>
-              <a href="tel:+34900000000">+34 900 000 000</a>
+              <a href="tel:+34900000000" aria-label="Llamar a VendemosTuCoche al +34 900 000 000">+34 900 000 000</a>
             </li>
             <li>
               📧 <strong>Email:</strong>
               <a href="mailto:soporte@vendemostucoche.com"
-                >soporte@vendemostucoche.com</a
-              >
+                aria-label="Enviar email a soporte@vendemostucoche.com">soporte@vendemostucoche.com</a>
             </li>
             <li>🕓 <strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
           </ul>
         </section>
 
         <!-- Redes sociales -->
-        <section title="Redes Sociales" class="footer-redes">
-          <h2>Nuestras Redes sociales</h2>
-          <a
-            href="https://www.facebook.com/VendemosTuCoche"
-            target="_blank"
-            aria-label="Facebook"
-          >
-            <img src="./images/icon/Facebook.svg" alt="Facebook" >
+        <section title="Redes Sociales" class="footer-redes" role="region" aria-labelledby="redes-title">
+          <h2 id="redes-title">Nuestras Redes sociales</h2>
+          <a href="https://www.facebook.com/VendemosTuCoche" target="_blank" aria-label="Facebook de VendemosTuCoche"
+            rel="noopener noreferrer">
+            <img src="./images/icon/Facebook.svg" alt="Facebook" role="img">
           </a>
-          <a
-            href="https://www.twitter.com/VendemosTuCoche"
-            target="_blank"
-            aria-label="Twitter"
-          >
-            <img src="./images/icon/X.svg" alt="Twitter" >
+          <a href="https://www.twitter.com/VendemosTuCoche" target="_blank" aria-label="Twitter de VendemosTuCoche"
+            rel="noopener noreferrer">
+            <img src="./images/icon/X.svg" alt="Twitter" role="img">
           </a>
-          <a
-            href="https://www.instagram.com/VendemosTuCoche"
-            target="_blank"
-            aria-label="Instagram"
-          >
-            <img src="./images/icon/Instagram.svg" alt="Insta" >
+          <a href="https://www.instagram.com/VendemosTuCoche" target="_blank" aria-label="Instagram de VendemosTuCoche"
+            rel="noopener noreferrer">
+            <img src="./images/icon/Instagram.svg" alt="Instagram" role="img">
           </a>
-          <a
-            href="https://www.linkedin.com/company/VendemosTuCoche"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <img src="./images/icon/Linkedin.svg" alt="Linkedin" >
+          <a href="https://www.linkedin.com/company/VendemosTuCoche" target="_blank"
+            aria-label="LinkedIn de VendemosTuCoche" rel="noopener noreferrer">
+            <img src="./images/icon/Linkedin.svg" alt="Linkedin" role="img">
           </a>
         </section>
 
-        <section class="footer-info">
-          <h2>© 2025 VendemosTuCoche</h2>
+        <section class="footer-info" role="region" aria-labelledby="footer-title">
+          <h2 id="footer-title">© 2025 VendemosTuCoche</h2>
           <p>Transacciones seguras, rápidas y sin estrés.</p>
-          <nav class="footer-nav">
-            <a href="aviso-legal.html">Aviso legal</a>
-            <a href="privacidad.html">Privacidad</a>
-            <a href="cookies.html">Cookies</a>
+          <nav class="footer-nav" role="navigation" aria-label="Enlaces legales">
+            <a href="aviso-legal.html" aria-label="Aviso legal">Aviso legal</a>
+            <a href="privacidad.html" aria-label="Política de privacidad">Privacidad</a>
+            <a href="cookies.html" aria-label="Política de cookies">Cookies</a>
           </nav>
         </section>
       </div>
     </footer>
+
   </body>
+
 </html>

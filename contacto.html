@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <!-- ENLACE DE SALTO -->
-  <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+  <a href="#inicio" class="skip-link" role="link" aria-label="Saltar al contenido principal">Saltar al contenido principal</a>
 
   <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
   </head>
   <body id="body-contacto">
 
-    <header>
+    <header role="banner">
       <a href="condiciones" title="condiciones">
         <div id="contenedor-logo">
           <img src="./images/empresa/logo.png" alt="Logo_empresa"  width="100" id="logo">
@@ -26,15 +26,15 @@
       </a>
 
       <!-- Checkbox + label para menú móvil (checkbox-hack) -->
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="hamburger">
+      <input type="checkbox" id="menu-toggle" aria-controls="menu-principal" aria-expanded="false" aria-label="Alternar menú de navegación">
+      <label for="menu-toggle" class="hamburger" aria-hidden="false">
         <span class="sr-only">Abrir menú de navegación</span>
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <nav class="menu-principal">
+      <nav class="menu-principal" id="menu-principal" role="navigation" aria-label="Menú principal">
         <ul>
           <li><a href="./index.html" class="link">INICIO</a></li>
           <li><a href="./servicios.html" class="link">SERVICIOS</a></li>
@@ -42,17 +42,17 @@
           <li><a href="#" class="link">CONTACTO</a></li>
         </ul>
       </nav>
-      <div id="usuario">
-        <a href="./login.html" class="link-usuario">
-          <img src="./images/usuarios/Login.png" alt="loginImage" class="perfil">
-          <span>INICIAR SESIÓN</span>
+      <div id="usuario" role="region" aria-label="Acceso de usuario">
+        <a href="./login.html" class="link-usuario" aria-describedby="login-desc">
+          <img src="./images/usuarios/Login.png" alt="" class="perfil" aria-hidden="true">
+          <span id="login-desc">INICIAR SESIÓN</span>
         </a>
       </div>
     </header>
 
-    <main id="inicio">
-      <section class="hero-contacto">
-        <h1>Estamos aquí para ayudarte</h1>
+    <main id="inicio" role="main" aria-labelledby="contacto-titulo">
+      <section class="hero-contacto" role="region" aria-labelledby="contacto-titulo">
+        <h1 id="contacto-titulo">Estamos aquí para ayudarte</h1>
         <p>
           En VendemosTuCoche queremos que tu experiencia sea rápida, sencilla y
           totalmente transparente. Si tienes dudas sobre nuestros servicios,
@@ -63,31 +63,35 @@
 
       <!-- SECCIÓN DE CONTACTO -->
 
-      <section class="contacto box">
-        <h2 class="titulo-seccion">Contacto</h2>
-        <p class="texto-intro">
+      <section class="contacto box" role="region" aria-labelledby="contacto-h2">
+        <h2 class="titulo-seccion" id="contacto-h2">Contacto</h2>
+        <p class="texto-intro" id="contacto-intro">
           Rellena el formulario y nuestro equipo te contactará lo antes posible.
         </p>
 
         <div class="contenedor-contacto">
           <!-- Formulario -->
-          <form class="formulario-contacto" id="formulario-contacto">
-            <table>
+          <form class="formulario-contacto" id="formulario-contacto" role="form" aria-labelledby="contacto-h2" aria-describedby="contacto-intro" novalidate>
+            <table role="presentation">
               <tr>
                 <td><label for="nombre">Nombre</label></td>
                 <td>
-                  <input type="text" id="nombre" name="nombre" required>
+                  <input type="text" id="nombre" name="nombre" required aria-required="true" aria-invalid="false" aria-describedby="nombre-desc">
+                  <span id="nombre-desc" class="sr-only">Introduce tu nombre completo</span>
                 </td>
               </tr>
               <tr>
                 <td><label for="correo">Correo electrónico</label></td>
                 <td>
-                  <input type="email" id="correo" name="correo" required>
+                  <input type="email" id="correo" name="correo" required aria-required="true" aria-invalid="false" aria-describedby="correo-desc">
+                  <span id="correo-desc" class="sr-only">Introduce una dirección de correo válida</span>
                 </td>
               </tr>
               <tr>
                 <td><label for="telefono">Teléfono</label></td>
-                <td><input type="tel" id="telefono" name="telefono" ></td>
+                <td><input type="tel" id="telefono" name="telefono" aria-invalid="false" aria-describedby="telefono-desc" >
+                    <span id="telefono-desc" class="sr-only">Opcional: número de teléfono con indicativo</span>
+                </td>
               </tr>
               <tr>
                 <td><label for="mensaje">Mensaje</label></td>
@@ -97,7 +101,11 @@
                     name="mensaje"
                     rows="5"
                     required
+                    aria-required="true"
+                    aria-invalid="false"
+                    aria-describedby="mensaje-desc"
                   ></textarea>
+                  <span id="mensaje-desc" class="sr-only">Escribe tu consulta o mensaje</span>
                 </td>
               </tr>
               <tr>
@@ -107,67 +115,70 @@
                     id="privacidad"
                     name="privacidad"
                     required
+                    aria-required="true"
+                    aria-checked="false"
+                    aria-describedby="privacidad-desc"
                   >
                   <label for="privacidad">
                     Acepto la
                     <a href="privacidad.html">política de privacidad</a>.
                   </label>
+                  <span id="privacidad-desc" class="sr-only">Debe aceptar la política de privacidad para enviar el formulario</span>
                 </td>
               </tr>
             </table>
           </form>
-          <div>
-            <button type="submit" class="boton-enviar">ENVIAR MENSAJE</button>
-            <button type="reset" class="boton-limpiar">LIMPIAR</button>
+          <div role="group" aria-label="Acciones de formulario">
+            <button type="submit" class="boton-enviar" aria-controls="formulario-contacto" aria-label="Enviar mensaje" aria-pressed="false">ENVIAR MENSAJE</button>
+            <button type="reset" class="boton-limpiar" aria-label="Limpiar formulario" aria-pressed="false">LIMPIAR</button>
           </div>
         </div>
       </section>
 
       <!-- Información de contacto lateral -->
-      <section class="informacion box">
+      <section class="informacion box" role="region" aria-labelledby="info-h3">
         <!-- Contenedor de la info -->
         <div class="contenedor-info">
-          <h3>También puedes contactarnos por:</h3>
+          <h3 id="info-h3">También puedes contactarnos por:</h3>
           <ul>
-            <li>📞 Teléfono: <a href="tel:+34900000000">+34 900 000 000</a></li>
+            <li><span aria-hidden="true">📞</span> Teléfono: <a href="tel:+34900000000">+34 900 000 000</a></li>
             <li>
-              📧 Email:
+              <span aria-hidden="true">📧</span> Email:
               <a href="mailto:soporte@vendemostucoche.com"
                 >soporte@vendemostucoche.com</a
               >
             </li>
-            <li>💬 WhatsApp: <a href="#">Habla con un asesor</a></li>
-            <li>🕓 Horario: Lunes a Viernes, 9:00 – 18:00</li>
+            <li><span aria-hidden="true">💬</span> WhatsApp: <a href="#">Habla con un asesor</a></li>
+            <li><span aria-hidden="true">🕓</span> Horario: Lunes a Viernes, 9:00 – 18:00</li>
           </ul>
         </div>
       </section>
 
       <!-- SECCIÓN DE LOCALIZACIÓN -->
-      <section class="localizacion">
-        <h2 class="titulo-seccion">Nuestra ubicación</h2>
-        <p class="texto-intro">
+      <section class="localizacion" role="region" aria-labelledby="loc-h2">
+        <h2 class="titulo-seccion" id="loc-h2">Nuestra ubicación</h2>
+        <p class="texto-intro" id="loc-intro">
           Visítanos o localiza la oficina más cercana a ti.
         </p>
 
         <div class="contenedor-localizacion">
           <!-- Mapa -->
-          <div id="mapa" class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23243.315206177303!2d-2.95636911797587!3d43.26369344569817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4e27664b89b9%3A0x6534acc41e95a645!2sBilbao%2C%20Vizcaya!5e0!3m2!1ses!2ses!4v1762723156751!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="localizacionMapa"></iframe>
+          <div id="mapa" class="mapa" role="region" aria-labelledby="mapa-titulo">
+            <h3 id="mapa-titulo" class="sr-only">Mapa de ubicación</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23243.315206177303!2d-2.95636911797587!3d43.26369344569817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4e27664b89b9%3A0x6534acc41e95a645!2sBilbao%2C%20Vizcaya!5e0!3m2!1ses!2ses!4v1762723156751!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="localizacionMapa" aria-label="Mapa de la oficina central" role="application"></iframe>
           </div>
 
           <!-- Información -->
-          <aside class="info-localizacion">
-            <h3>Oficina central</h3>
+          <aside class="info-localizacion" role="complementary" aria-labelledby="oficina-titulo">
+            <h3 id="oficina-titulo">Oficina central</h3>
             <p>
               Av. de la Empresa, 12<br>
               102012 Bilbao, España
             </p>
             <p>🕓 Lunes a Viernes, 9:00 – 18:00</p>
 
-            <div class="botones-localizacion">
-              <button id="boton-ubicacion" class="boton-enviar">
-                Detectar mi ubicación
-              </button>
+            <div class="botones-localizacion" role="group" aria-label="Controles de localización">
+              <button id="boton-ubicacion" class="boton-enviar" aria-controls="resultado-ubicacion" aria-live="polite">Detectar mi ubicación</button>
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=Av.+de+la+Empresa+12+Madrid"
                 target="_blank"
@@ -176,16 +187,16 @@
               >
             </div>
 
-            <div id="resultado-ubicacion" class="resultado-ubicacion"></div>
+            <div id="resultado-ubicacion" class="resultado-ubicacion" role="status" aria-live="polite" aria-atomic="true"></div>
           </aside>
         </div>
       </section>
     </main>
     <!-- Pie de página -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo" aria-label="Información del pie de página">
       <div class="footer-contenido">
-        <section class="footer-soporte">
-          <h3>¿Necesitas ayuda?</h3>
+        <section class="footer-soporte" role="region" aria-labelledby="soporte-h3">
+          <h3 id="soporte-h3">¿Necesitas ayuda?</h3>
           <p>
             Estamos aquí para resolver tus dudas y acompañarte durante todo el
             proceso.
@@ -193,11 +204,11 @@
 
           <ul class="footer-contacto">
             <li>
-              📞 <strong>Teléfono / WhatsApp:</strong>
+              <span aria-hidden="true">📞</span> <strong>Teléfono / WhatsApp:</strong>
               <a href="tel:+34900000000">+34 900 000 000</a>
             </li>
             <li>
-              📧 <strong>Email:</strong>
+              <span aria-hidden="true">📧</span> <strong>Email:</strong>
               <a href="mailto:soporte@vendemostucoche.com"
                 >soporte@vendemostucoche.com</a
               >
@@ -207,8 +218,8 @@
         </section>
 
         <!-- Redes sociales -->
-        <section title="Redes Sociales" class="footer-redes">
-          <h2>Nuestras Redes sociales</h2>
+        <section title="Redes Sociales" class="footer-redes" role="region" aria-labelledby="redes-h2">
+          <h2 id="redes-h2" class="sr-only">Nuestras Redes sociales</h2>
           <a
             href="https://www.facebook.com/VendemosTuCoche"
             target="_blank"
@@ -239,10 +250,10 @@
           </a>
         </section>
 
-        <section class="footer-info">
-          <h2>© 2025 VendemosTuCoche</h2>
+        <section class="footer-info" role="region" aria-labelledby="copyright-h2">
+          <h2 id="copyright-h2">© 2025 VendemosTuCoche</h2>
           <p>Transacciones seguras, rápidas y sin estrés.</p>
-          <nav class="footer-nav">
+          <nav class="footer-nav" role="navigation" aria-label="Navegación del pie de página">
             <a href="aviso-legal.html">Aviso legal</a>
             <a href="privacidad.html">Privacidad</a>
             <a href="cookies.html">Cookies</a>
