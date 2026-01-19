@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- ENLACE DE SALTO -->
+  <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="author" content="Iker Fortes" >
+    <meta
+      name="description"
+      content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente."
+    >
+    <!-- Estilos e impresión -->
+    <title>VendemosTuCoche</title>
+    <!-- EL ICONO NO FUNCIONA CON LA EXTENSIÓN LIVE-SERVER -->
+    <link rel="icon" href="./images/empresa/favicon.ico" type="image/x-icon" >
+    <link rel="stylesheet" href="css/print.css" media="print" >
+    <link rel="stylesheet" href="css/main.css" >
+    <link rel="stylesheet" href="css/secciones/index.css">
+    <link rel="stylesheet" href="css/responsive/index.css" >
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <div id="contenedor-logo">
+          <img
+            src="./images/empresa/logo.png"
+            alt="Logo"
+            width="100"
+            id="logo"
+          >
+        </div>
+      </a>
+
+      <!-- Checkbox + label para menú móvil (checkbox-hack) -->
+      <input type="checkbox" id="menu-toggle" aria-label="Abrir menú" >
+      <label for="menu-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="menu-principal">
+        <ul>
+          <li><a href="#inicio" class="link">INICIO</a></li>
+          <li><a href="./servicios.html" class="link">SERVICIOS</a></li>
+          <li><a href="./mantenimiento.html" class="link">OPINIONES</a></li>
+          <li><a href="./contacto.html" class="link">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <div id="usuario">
+        <a href="./mantenimiento.html" class="link"
+          ><img src="./images/usuarios/Login.png" alt="imgLogin" class="perfil"
+        ></a>
+        <a href="./mantenimiento.html" class="link">INICIAR SESIÓN</a>
+      </div>
+    </header>
+    <!-- 🌟 Sección principal o “hero” -->
+    <section id="inicio" class="hero">
+      <img src="./images/empresa/logoCocheDeLado-fondo.png" alt="cocheEmpresa">
+      <div id="intro">
+        <h1>Bienvenido a nuestra página web</h1>
+        <p>
+          VendemosTuCoche es una plataforma innovadora dedicada a la compra y venta de coches de
+          segunda mano de forma rápida, segura y transparente. Nuestro objetivo
+          es revolucionar la manera en que las personas compran y venden
+          vehículos, ofreciendo un espacio confiable donde particulares y
+          concesionarios puedan conectar directamente sin intermediarios
+          innecesarios.
+        </p>
+        <details>
+          <summary class="btn">Ver más</summary>
+          <p>
+            A través de nuestra web y aplicación, los usuarios pueden publicar,
+            descubrir y negociar vehículos con total libertad, respaldados por
+            herramientas que garantizan la verificación del estado del coche,
+            historial de mantenimiento y precios justos según el mercado.
+          </p>
+          <p>
+            Creemos que vender o comprar un coche no debería ser complicado ni
+            arriesgado, por eso en VendemosTuCoche simplificamos el
+            proceso con una experiencia intuitiva, soporte personalizado y
+            servicios complementarios como tasación gratuita, financiación y
+            asistencia en trámites.
+          </p>
+          <p>
+            Nuestro compromiso es claro: hacer que cambiar de coche sea tan
+            fácil como cambiar de idea.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 💼 Sección de SERVICIOS o proyectos -->
+    <section id="servicios">
+      <div class="intro-servicios">
+        <h2>Servicios</h2>
+        <p>
+          Publica, vende y compra coches con la seguridad y garantías que
+          necesitas.
+        </p>
+      </div>
+
+      <div class="servicios-container">
+        <div class="servicio cristal-empañado">
+          <div class="servicio-header">
+            <img
+              src="./images/empresa/vender.png"
+              alt="logo"
+              width="60"
+              height="60"
+            >
+            <div>
+              <h3>Vende tu coche rápido y sin estrés</h3>
+              <p>Publica tu coche de forma rápida, sencilla y 100% segura.</p>
+            </div>
+          </div>
+          <ul>
+            <li>Asesoría en la creación del anuncio.</li>
+            <li>Verificación completa del historial del vehículo.</li>
+            <li>Chats protegidos entre comprador y vendedor.</li>
+            <li>Venta rápida con ofertas de concesionarios certificados.</li>
+          </ul>
+          <div class="botones">
+            <a href="./mantenimiento.html" class="btn">Publicar mi coche</a>
+            <a href="./servicios.html#VendeTuCoche" class="btn info"
+              >Más información</a
+            >
+          </div>
+        </div>
+
+        <div class="servicio cristal-empañado">
+          <div class="servicio-header">
+            <img
+              src="./images/empresa/confianza.png"
+              alt="logo"
+              width="60"
+              height="60"
+            >
+            <div>
+              <h3>Compra con Confianza</h3>
+              <p>
+                Encuentra coches verificados con garantía y financiación
+                flexible.
+              </p>
+            </div>
+          </div>
+          <ul>
+            <li>
+              Informe técnico detallado y fotografías reales del vehiculo.
+            </li>
+            <li>Reserva online del coche.</li>
+            <li>Financiación personalizada.</li>
+            <li>Garantía de hasta 12 meses.</li>
+          </ul>
+          <div class="botones">
+            <a href="./mantenimiento.html" class="btn">Ver coches disponibles</a>
+            <a href="./mantenimiento.html" class="btn info">Solicitar financiación</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonios">
+      <div class="cabecera-testimonios">
+        <h2>Opiniones de Nuestros Clientes</h2>
+        <p class="intro">
+          Miles de usuarios ya confiaron en nosotros para comprar o vender su
+          coche. Estas son algunas de sus experiencias:
+        </p>
+      </div>
+      <div class="auto-marquee">
+        <div class="auto-marquee__track">
+          <article class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Munia.png"
+                alt="cliente"
+              >
+
+              <h2 class="autor">
+                Munia Z. <br>
+                <span class="azul-claro">CLIENTA</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “Ya he usado el servicio dos veces. En ambas ocasiones el informe
+              fue claro y muy útil para negociar el precio del coche.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Antonio.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Antonio L. <br >
+                <span class="azul-claro">COMPRADOR</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Excelente servicio. Revisaron el coche que quería comprar y me
+              enviaron un informe completo con fotos y detalles. 100 %
+              recomendable.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Laia.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Laia O. <br >
+                <span class="azul-claro">VENDEDORA</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “Vendí mi coche en menos de una semana gracias a su revisión
+              detallada. Me ayudaron a fijar un precio justo y generó confianza
+              en los compradores.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Oihan.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Oihan A. <br >
+                <span class="azul-claro">COMPRADOR</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “El informe técnico me ahorró una compra arriesgada. Muy
+              profesionales y puntuales en la entrega del reporte.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Laura.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Laura V.<br >
+                <span class="azul-claro">TALLER ASOCIADO</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Colaboramos con ellos en varias inspecciones. Su trato es cercano
+              y siempre cumplen con los estándares de calidad.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Aretx.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Aretx A. <br>
+                <span class="azul-claro">COMPRADOR</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Muy fácil todo el proceso. Pude revisar el coche desde otra
+              ciudad y tomar una decisión segura. Servicio 7/10.”
+            </blockquote>
+          </article>
+        </div>
+
+        <div class="auto-marquee__track">
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Munia.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Munia Z. <br >
+                <span class="azul-claro">CLIENTA</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “Ya he usado el servicio dos veces. En ambas ocasiones el informe
+              fue claro y muy útil para negociar el precio del coche.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Antonio.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Antonio L. <br >
+                <span class="azul-claro">COMPRADOR</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Excelente servicio. Revisaron el coche que quería comprar y me
+              enviaron un informe completo con fotos y detalles. 100 %
+              recomendable.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Laia.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Laia O. <br >
+                <span class="azul-claro">VENDEDORA</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “Vendí mi coche en menos de una semana gracias a su revisión
+              detallada. Me ayudaron a fijar un precio justo y generó confianza
+              en los compradores.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Oihan.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Oihan A. <br >
+                <span class="azul-claro">COMPRADOR</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “El informe técnico me ahorró una compra arriesgada. Muy
+              profesionales y puntuales en la entrega del reporte.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Laura.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Laura V.<br >
+                <span class="azul-claro">TALLER ASOCIADO</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Colaboramos con ellos en varias inspecciones. Su trato es cercano
+              y siempre cumplen con los estándares de calidad.”
+            </blockquote>
+          </article>
+
+          <article title="Usuario" class="testimonio">
+            <div class="contenedor-perfil">
+              <img
+                class="perfil"
+                src="./images/usuarios/Aretx.png"
+                alt="cliente"
+              >
+              <h2 class="autor">
+                Aretx A. <br >
+                <span class="azul-claro">COMPRADOR</span>
+              </h2>
+            </div>
+            <div class="contenedor-estrellas">
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+              <span class="estrella">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Muy fácil todo el proceso. Pude revisar el coche desde otra
+              ciudad y tomar una decisión segura. Servicio 7/10.”
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⚙️ Pie de página -->
+    <footer class="footer">
+      <div class="footer-contenido">
+        <section class="footer-soporte">
+          <h3>¿Necesitas ayuda?</h3>
+          <p>
+            Estamos aquí para resolver tus dudas y acompañarte durante todo el
+            proceso.
+          </p>
+
+          <ul class="footer-contacto">
+            <li>
+              📞 <strong>Teléfono / WhatsApp:</strong>
+              <a href="tel:+34900000000">+34 900 000 000</a>
+            </li>
+            <li>
+              📧 <strong>Email:</strong>
+              <a href="mailto:soporte@vendemostucoche.com"
+                >soporte@vendemostucoche.com</a
+              >
+            </li>
+            <li>🕓 <strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
+          </ul>
+        </section>
+
+        <!-- Redes sociales -->
+        <section title="Redes Sociales" class="footer-redes">
+          <h2>Nuestras Redes sociales</h2>
+          <a
+            href="https://www.facebook.com/VendemosTuCoche"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="./images/icon/Facebook.svg" alt="Facebook" >
+          </a>
+          <a
+            href="https://www.twitter.com/VendemosTuCoche"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <img src="./images/icon/X.svg" alt="Twitter" >
+          </a>
+          <a
+            href="https://www.instagram.com/VendemosTuCoche"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="./images/icon/Instagram.svg" alt="Insta" >
+          </a>
+          <a
+            href="https://www.linkedin.com/company/VendemosTuCoche"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <img src="./images/icon/Linkedin.svg" alt="Linkedin" >
+          </a>
+        </section>
+
+        <section class="footer-info">
+          <h4>© 2025 VendemosTuCoche</h4>
+          <p>Transacciones seguras, rápidas y sin estrés.</p>
+          <nav class="footer-nav">
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+          </nav>
+        </section>
+      </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+/* Archivo principal de estilos
+   Este archivo centraliza todos los CSS del proyecto.
+   Estructura: Base → Layout → Componentes → Responsive
+*/
+
+/* ===== BASE ===== */
+@import url("./base.css");
+
+/* ===== LAYOUT ===== */
+@import url("./layout.css");
+
+/* ===== COMPONENTES ===== */
+@import url("./components.css");
+
+/* ===== RESPONSIVE ===== */
+@import url("./responsive.css");

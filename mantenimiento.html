@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- ENLACE DE SALTO -->
+  <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="author" content="Iker Fortes" >
+    <meta
+      name="description"
+      content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente."
+    >
+    <!-- Estilos e impresión -->
+    <title>VendemosTuCoche - Mantenimiento</title>
+    <link
+      rel="icon"
+      href="./images/empresa/favicon.ico"
+      type="image/x-icon"
+    >
+    <link rel="stylesheet" href="css/main.css" >
+    <link rel="stylesheet" href="css/secciones/index.css" >
+    <link rel="stylesheet" href="css/secciones/mantenimiento.css" >
+    <link rel="stylesheet" href="css/print.css" media="print" >
+  </head>
+
+  <body>
+    <header>
+      <a href="./index.html">
+        <div id="contenedor-logo">
+          <img
+            src="./images/empresa/logo.png"
+            alt="Logo"
+            width="100"
+            id="logo"
+          >
+        </div>
+      </a>
+
+      <!-- Checkbox + label para menú móvil (checkbox-hack) -->
+      <input type="checkbox" id="menu-toggle" aria-label="Abrir menú" >
+      <label for="menu-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="menu-principal">
+        <ul>
+          <li><a href="./index.html" class="link">INICIO</a></li>
+          <li><a href="./servicios.html" class="link">SERVICIOS</a></li>
+          <li><a href="#" class="link">OPINIONES</a></li>
+          <li><a href="./contacto.html" class="link">CONTACTO</a></li>
+        </ul>
+      </nav>
+
+      <div id="usuario">
+        <a href="./mantenimiento.html" class="link"
+          ><img src="./images/usuarios/Login.png" class="perfil" alt="Perfil"
+        ></a>
+        <a href="./mantenimiento.html" class="link">INICIAR SESIÓN</a>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <div class="contenedor-mantenimiento">
+        <img src="./images/web/aviso.png" alt="Mantenimiento" >
+        <h1>Estamos en mantenimiento</h1>
+        <p>
+          Estamos realizando mejoras para ofrecerte una experiencia aún mejor.
+          <br >
+          Volveremos a estar disponibles muy pronto.
+        </p>
+
+        <div class="reloj" id="reloj"></div>
+
+        <a href="./index.html" class="boton-volver">Volver al inicio</a>
+      </div>
+    </main>
+
+    <!-- ⚙️ Pie de página -->
+    <footer class="footer">
+      <div class="footer-contenido">
+        <section class="footer-soporte">
+          <h3>¿Necesitas ayuda?</h3>
+          <p>
+            Estamos aquí para resolver tus dudas y acompañarte durante todo el
+            proceso.
+          </p>
+
+          <ul class="footer-contacto">
+            <li>
+              📞 <strong>Teléfono / WhatsApp:</strong>
+              <a href="tel:+34900000000">+34 900 000 000</a>
+            </li>
+            <li>
+              📧 <strong>Email:</strong>
+              <a href="mailto:soporte@vendemostucoche.com"
+                >soporte@vendemostucoche.com</a
+              >
+            </li>
+            <li>🕓 <strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
+          </ul>
+        </section>
+
+        <!-- Redes sociales -->
+        <section title="Redes Sociales" class="footer-redes">
+          <h2>Nuestras Redes sociales</h2>
+          <a
+            href="https://www.facebook.com/VendemosTuCoche"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="./images/icon/Facebook.svg" alt="Facebook" >
+          </a>
+          <a
+            href="https://www.twitter.com/VendemosTuCoche"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <img src="./images/icon/X.svg" alt="Twitter" >
+          </a>
+          <a
+            href="https://www.instagram.com/VendemosTuCoche"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="./images/icon/Instagram.svg" alt="Insta" >
+          </a>
+          <a
+            href="https://www.linkedin.com/company/VendemosTuCoche"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <img src="./images/icon/Linkedin.svg" alt="Linkedin" >
+          </a>
+        </section>
+
+        <section class="footer-info">
+          <h4>© 2025 VendemosTuCoche</h4>
+          <p>Transacciones seguras, rápidas y sin estrés.</p>
+          <nav class="footer-nav">
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+          </nav>
+        </section>
+      </div>
+    </footer>
+
+    <script src="./js/mantenimiento.js"></script>
+  </body>
+</html>

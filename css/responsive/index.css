@@ -1,0 +1,35 @@
+@media (max-width: 63.9375rem) and (min-width: 48rem) {
+  /* Destacado: imagen oculta en tablet */
+  .hero {
+    display: block;
+    width: 80%;
+    padding: 1.875rem 0;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  .hero img {
+    display: none;
+  }
+
+  /* Testimonios en tablet */
+  .testimonios .contenedor-testimonios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  /* HERO */
+  .hero {
+    display: block;
+    font-size: 0.9rem;
+    width: 90%;
+    text-align: center;
+  }
+  .hero img {
+    display: none;
+  }
+
+  .intro {
+    text-align: center;
+  }
+}

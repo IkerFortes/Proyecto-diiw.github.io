@@ -1,0 +1,70 @@
+/* ===== ESTILOS PÁGINA DE MANTENIMIENTO ===== */
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.contenedor-mantenimiento {
+  max-width: 40.625rem;
+  background: white;
+  border-radius: 1.125rem;
+  padding: 2.5rem 1.875rem;
+  box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.1);
+  animation: aparecer 0.8s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contenedor-mantenimiento img {
+  width: 7.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: #ff5300;
+  margin-bottom: 0.6rem;
+  font-size: 1.8rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  color: #013a45;
+}
+
+.reloj {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff5300;
+  margin-top: 0.5rem;
+}
+
+.boton-volver {
+  display: inline-block;
+  background: #ff5300;
+  color: white;
+  padding: 0.75rem 1.375rem;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.boton-volver:hover {
+  background: #012d3c;
+  transform: translateY(-0.1875rem);
+}

@@ -1,0 +1,83 @@
+/* print.css - estilos para impresión */
+/* Mostrar solo contenido relevante y limpiar estilos decorativos */
+@media print {
+  /* Reset visual */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 0.75rem; /* ≈12pt */
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ocultar elementos de navegación / interacción / banners / footer */
+  header,
+  nav,
+  footer, /* ✅ añadido */
+  .hamburger,
+  .menu-principal,
+  .pie-pagina,
+  .cookie-consent,
+  .no-imprimir {
+    display: none !important;
+  }
+
+  /* Mostrar el contenido principal y limpiar márgenes */
+  main,
+  .contenido,
+  .article,
+  .pagina-imprimible {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #000 !important;
+    background: transparent !important;
+  }
+
+  /* Imágenes: escalar para ajustar página */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  /* Tablas y listados: hacer legibles */
+  table,
+  thead,
+  tbody,
+  tr,
+  td,
+  th {
+    border: 0.0625rem solid #000 !important; /* 1px ≈ 0.0625rem */
+    border-collapse: collapse !important;
+    font-size: 0.75rem;
+  }
+
+  th,
+  td {
+    padding: 0.35rem !important;
+  }
+
+  /* Evitar que se divida un bloque importante entre páginas */
+  .no-break,
+  .tarjeta,
+  article {
+    page-break-inside: avoid;
+  }
+
+  /* Ajuste extra para listas y párrafos */
+  p,
+  li {
+    margin: 0.25rem 0 !important;
+    line-height: 1.4;
+  }
+}

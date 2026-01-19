@@ -1,0 +1,230 @@
+@media (max-width: 63.9375rem) and (min-width: 48rem) {
+  #body-contacto {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #body-contacto main {
+    grid-template-areas:
+      "hero"
+      "contacto"
+      "info"
+      "acceso"
+      "localizacion"
+      "footer";
+    grid-template-columns: 1fr;
+    width: min(95%, 62.5rem);
+    margin: 2rem auto;
+    gap: 1.5rem;
+  }
+
+  .hero-contacto {
+    display: flex !important;
+    text-align: center;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+  }
+  .hero-contacto h1 {
+    font-size: 1.8rem;
+  }
+  .hero-contacto p {
+    font-size: 1rem;
+  }
+
+  .contenedor-contacto {
+    align-items: center;
+  }
+
+  .contenedor-contacto div {
+    margin-left: 5rem;
+  }
+
+  .contenedor-contacto div * {
+    margin: 0.625rem;
+  }
+
+  .contacto table {
+    display: block;
+    width: 100%;
+  }
+
+  .contacto tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.625rem;
+  }
+
+  .contacto td {
+    flex: 1 1 100%;
+    padding: 0.375rem 0;
+  }
+
+  .contacto td:first-child label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .contacto input[type="text"],
+  .contacto input[type="email"],
+  .contacto input[type="tel"],
+  .contacto textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.625rem;
+  }
+
+  .contacto textarea {
+    min-height: 8.125rem;
+  }
+
+  .contacto > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .boton-enviar,
+  .boton-limpiar {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .informacion {
+    padding: 1.5rem;
+  }
+
+  #mapa {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0.625rem;
+  }
+
+  .contenedor-localizacion {
+    flex-direction: column;
+  }
+
+  footer {
+    grid-area: footer;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  #body-contacto main {
+    grid-template-areas:
+      "hero"
+      "contacto"
+      "info"
+      "acceso"
+      "localizacion"
+      "footer";
+    grid-template-columns: 1fr;
+    width: min(96%, 50rem);
+    margin: 1rem auto;
+    gap: 1rem;
+  }
+
+  .contacto table {
+    display: block;
+    width: 100%;
+  }
+
+  .contacto tr {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .contacto td {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0;
+  }
+
+  .contacto td:first-child label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .contacto input[type="text"],
+  .contacto input[type="email"],
+  .contacto input[type="tel"],
+  .contacto textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contacto textarea {
+    min-height: 9.375rem;
+  }
+
+  .contacto > div {
+    flex-direction: column;
+    gap: 0.625rem;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  .boton-enviar,
+  .boton-limpiar {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .informacion {
+    padding: 1.125rem;
+  }
+
+  #mapa {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0.625rem;
+  }
+
+  .contenedor-localizacion {
+    flex-direction: column;
+  }
+
+  .info-localizacion {
+    flex: 1 1 100%;
+  }
+
+  #contenedor-logo {
+    position: relative;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+  .menu-principal a {
+    padding: 0.875rem 1rem;
+    font-size: 1.05rem;
+  }
+
+  .hero-contacto {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .hero-contacto h1 {
+    font-size: 1.6rem;
+  }
+  .hero-contacto p {
+    font-size: 0.95rem;
+  }
+}

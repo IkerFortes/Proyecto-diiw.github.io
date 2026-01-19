@@ -1,0 +1,311 @@
+/* ===== HERO ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 40rem;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 1.25rem;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  text-align: center;
+  width: 70%;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.hero:hover {
+  transform: translateY(-0.1875rem);
+}
+
+.hero img {
+  margin: 0;
+  max-width: 80%;
+  height: auto;
+  object-fit: cover;
+  padding: 0;
+  border: 0.5rem solid #00455d;
+  border-left: 0;
+  border-top-right-radius: 1.25rem;
+  border-end-end-radius: 1.25rem;
+  transition: border-color 0.3s ease, filter 0.3s ease;
+}
+
+.hero img:hover {
+  border-color: #ff5300;
+  filter: brightness(1.05);
+}
+
+.hero img {
+  max-height: 100%;
+}
+
+details {
+  text-align: center;
+}
+
+details > summary {
+  list-style: none; /* Quita marcador de lista */
+  display: inline-block; /* Mantiene centrado incluso cuando se abre */
+  cursor: pointer;
+  background-color: #ff5b00; /* tu color de botón */
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* Quita el triangulito del summary en todos los navegadores */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary::marker {
+  content: "";
+}
+
+/* summary.btn */
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.1875rem;
+}
+
+/* ===== SERVICIOS ===== */
+#servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 3.75rem 2.5rem;
+  width: 100%;
+  background-color: #00455d;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+#servicios > div:first-child {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+}
+
+#servicios h2 {
+  font-size: 2rem;
+  margin-bottom: 0.625rem;
+  color: #ff5300;
+}
+
+#servicios p {
+  font-size: 1.1rem;
+  color: #d7d7d7;
+}
+
+#servicios .servicios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.875rem;
+  width: 100%;
+  max-width: 75rem;
+}
+
+#servicios .servicios-container li {
+  color: white;
+  list-style-image: url(../../images/web/cehck-22-22.png);
+}
+
+.servicio {
+  width: 34.375rem;
+  min-height: 25rem;
+  margin: 0.625rem;
+  padding: 1.25rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #222;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.5rem 1.125rem rgba(0, 0, 0, 0.25);
+}
+
+.servicio > div:first-child {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.servicio img {
+  border-radius: 0.625rem;
+  border: 0.1875rem solid #00455d;
+  width: 3.75rem;
+  height: 3.75rem;
+  transition: border-color 0.3s ease;
+}
+
+.servicio img:hover {
+  border-color: #ff5300;
+}
+
+.servicio ul {
+  padding-left: 2.5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.servicio li {
+  position: relative;
+  padding-left: 0.625rem;
+  margin-bottom: 0.5rem;
+  list-style-image: url("../imágenes/empresa/cehck-22-22.png");
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.botones > * {
+  width: 14.375rem;
+  background-color: #ff5300;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.625rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.botones > *:hover {
+  background-color: #00455d;
+  transform: scale(1.05);
+}
+
+/* ===== TESTIMONIOS ===== */
+.cabecera-testimonios {
+  margin-top: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cabecera-testimonios h2 {
+  color: #00455d;
+}
+
+.cabecera-testimonios p {
+  color: #666666;
+}
+
+.contenedor-estrellas {
+  display: flex;
+  justify-content: center;
+}
+
+.estrella {
+  font-size: 1.875rem;
+  color: #012d3c;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.estrella:hover {
+  color: #00455d;
+  transform: scale(1.2);
+}
+
+/* RESEÑAS */
+.testimonios {
+  width: 100%;
+  margin: 0 auto 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Contenedor visible */
+.auto-marquee {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 21.875rem;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+}
+
+/* Track (duplicado para bucle) */
+.auto-marquee__track {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+  animation: scroll-testimonios 45s linear infinite;
+  padding-right: 1.25rem;
+}
+
+/* Testimonios individuales */
+.testimonio {
+  flex: 0 0 18.75rem;
+  height: 18.75rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+  background-color: #00455d;
+  color: #ffffff;
+}
+
+.testimonio h2 {
+  font-size: 100%;
+}
+
+.testimonio:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0.375rem 1.25rem rgba(0, 0, 0, 0.25);
+  background-color: #ff5300;
+  color: #fff;
+}
+
+/* Animación de desplazamiento infinito */
+@keyframes scroll-testimonios {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pausa al pasar el ratón */
+.auto-marquee:hover .auto-marquee__track {
+  animation-play-state: paused;
+}
+
+/* Perfil y contenido */
+.contenedor-perfil {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-perfil * {
+  margin: 0.625rem;
+  text-align: center;
+}
