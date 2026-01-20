@@ -2,56 +2,47 @@
    BOTONES GENERALES
    ========================================================== */
 
-.btn {
-  border-radius: 0.75rem;
-  font-size: 1.1rem;
-  width: 13.125rem;
-  margin: 0.625rem;
-  background-color: var(--accent, #151313);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #ffffff;
+/* Limpiado: Mantén solo estética y efectos únicos */
+.btn-custom { /* Creamos una clase nueva para tus estilos base únicos */
+  border-radius: 0.75rem; /* Bootstrap usa .rounded-3 o .rounded-pill, pero mantienes tu valor exacto */
   text-align: center;
   text-decoration: none;
-  padding: 0.625rem 0.875rem;
-  transition: background-color 0.3s ease, border-color 0.3s ease,
-    transform 0.2s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
-  backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem); /* Único tuyo */
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: var(--primary, #00455d);
-  border-color: var(--accent, #ff5300);
-  transform: scale(1.05);
+.btn-custom:hover,
+.btn-custom:focus {
+  transform: scale(1.05); /* El efecto de hover lo mantienes */
 }
 
-/* ==========================================================
-   BOTONES ESPECIALES
-   ========================================================== */
+/* --- Variantes de Color (Primary/Accent) --- */
 
-.btn.info {
-  border-radius: 0.75rem;
-  font-size: 1.1rem;
-  width: 13.125rem;
-  margin: 0.625rem;
+/* Tu botón principal: Lo mapeamos a Bootstrap btn-primary */
+.btn-primary {
+    background-color: var(--accent, #151313); /* Tu color por defecto */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary, #00455d); /* El hover/focus usa el color primario */
+  border-color: var(--accent, #ff5300) !important;
+}
+
+/* Tu botón info: Lo mapeamos a Bootstrap btn-outline-light para el estilo transparente */
+.btn-outline-light { /* Reutilizamos la clase de Bootstrap */
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  padding: 0.625rem 0.875rem;
-  transition: background-color 0.3s ease, border-color 0.3s ease,
-    transform 0.2s ease;
-  cursor: pointer;
-  backdrop-filter: blur(0.25rem);
 }
 
-.btn.info:hover,
-.btn.info:focus {
+.btn-outline-light:hover,
+.btn-outline-light:focus {
   background-color: rgba(255, 255, 255, 0.15);
-  border-color: var(--accent, #ff5300);
-  transform: scale(1.05);
+  border-color: var(--accent, #ff5300) !important;
 }
 
 /* Naranja para texto/acento */

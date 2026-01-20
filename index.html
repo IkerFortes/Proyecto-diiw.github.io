@@ -1,366 +1,556 @@
 <!DOCTYPE html>
 <html lang="es">
   <!-- ENLACE DE SALTO -->
-  <a href="#inicio" class="skip-link" role="link" aria-label="Saltar al contenido principal">Saltar al contenido principal</a>
+  <a href="#inicio" class="skip-link" role="link" aria-label="Saltar al contenido principal">Saltar al contenido
+    principal</a>
 
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="author" content="Iker Fortes" >
-    <meta name="description" content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iker Fortes">
+    <meta name="description"
+      content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente.">
 
     <!-- Estilos e impresión -->
     <title>VendemosTuCoche</title>
 
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- EL ICONO NO FUNCIONA CON LA EXTENSIÓN LIVE-SERVER -->
-    <link rel="icon" href="./images/empresa/favicon.ico" type="image/x-icon" >
-    <link rel="stylesheet" href="css/print.css" media="print" >
-    <link rel="stylesheet" href="css/main.css" >
+    <link rel="icon" href="./images/empresa/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/secciones/index.css">
-    <link rel="stylesheet" href="css/responsive/index.css" >
+    <link rel="stylesheet" href="css/responsive/index.css">
   </head>
+
   <body>
-    <header role="banner" aria-label="Cabecera del sitio">
-      <a href="condiciones" title="condiciones" aria-label="Ir a condiciones">
-        <div id="contenedor-logo">
-          <img
-            src="./images/empresa/logo.png" alt="Logo_empresa"  width="100" id="logo" role="img" aria-label="Logotipo de VendemosTuCoche">
-        </div>
-      </a>
 
-      <!-- Checkbox + label para menú móvil (checkbox-hack) -->
-      <input
-        type="checkbox"
-        id="menu-toggle"
-        aria-controls="menu-principal"
-        aria-expanded="false"
-        aria-label="Mostrar u ocultar menú de navegación"
-      >
-      <label for="menu-toggle" class="hamburger" role="button" aria-controls="menu-principal" aria-label="Botón abrir/cerrar menú de navegación" tabindex="0">
-        <span class="sr-only">Abrir menú de navegación</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+    <header role="banner" class="navbar navbar-expand-lg fixed-top shadow-sm p-0">
+      <div class="container-fluid px-4 h-100">
 
-      <nav id="menu-principal" class="menu-principal" role="navigation" aria-label="Menú principal" aria-hidden="true">
-        <ul role="list">
-          <li role="listitem"><a href="#inicio" class="link">INICIO</a></li>
-          <li role="listitem"><a href="./servicios.html" class="link">SERVICIOS</a></li>
-          <li role="listitem"><a href="./mantenimiento.html" class="link">OPINIONES</a></li>
-          <li role="listitem"><a href="./contacto.html" class="link">CONTACTO</a></li>
-        </ul>
-      </nav>
-      <div id="usuario" aria-live="polite" role="navigation" aria-label="Área de usuario">
-        <a href="./login.html" class="link-usuario" aria-label="Iniciar sesión, abre la página de inicio de sesión">
-          <img src="./images/usuarios/Login.png" alt="" class="perfil" aria-hidden="true">
-          <span>INICIAR SESIÓN</span>
+        <!-- LOGO (Izquierda) -->
+        <a href="index.html" class="navbar-brand">
+          <div id="contenedor-logo">
+            <img src="./images/empresa/logo.png" alt="Logo" id="logo">
+          </div>
         </a>
+
+        <!-- CONTENEDOR DERECHO: Usuario y Botón Hamburguesa (ms-auto empuja a la derecha) -->
+        <div class="d-flex align-items-center ms-auto">
+
+          <!-- MENÚ (Se colapsa/despliega por debajo de los elementos anteriores) -->
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <!-- Los enlaces ocupan todo el ancho disponible al colapsar -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link link" href="./index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./servicios.html">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./mantenimiento.html">OPINIONES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./contacto.html">CONTACTO</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- USUARIO (Siempre visible, me-3 añade espacio a la derecha) -->
+          <div id="usuario" class="me-3">
+            <a href="./login.html" class="link-usuario">
+              <img src="./images/usuarios/Login.png" alt="Perfil" class="perfil">
+              <!-- El texto solo aparece en pantallas grandes -->
+              <span class="small d-none d-md-inline">INICIAR SESIÓN</span>
+            </a>
+          </div>
+
+          <!-- Botón Hamburguesa (Abre el Offcanvas, solo visible en móvil/tablet) -->
+          <!-- data-bs-target ahora apunta a "#offcanvasMenu" -->
+          <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span style="filter: invert(1);">
+              <img src="./images/web/hambueger.png" alt="hamburguesa" width="40" height="40">
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasMenuLabel">Navegación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- navbar-nav y flex-column aseguran que los enlaces se apilan verticalmente en el sidebar -->
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 flex-column">
+            <li class="nav-item">
+              <a class="nav-link link" href="#inicio">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./servicios.html">SERVICIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./mantenimiento.html">OPINIONES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./contacto.html">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
-    <!-- Sección principal o “hero” -->
-    <section id="inicio" class="hero" role="main" aria-labelledby="bienvenida">
-      <img src="./images/empresa/logoCocheDeLado-fondo.png" alt="cocheEmpresa" role="img" aria-label="Imagen de coche de la empresa">
-      <div id="intro">
-        <h1 id="bienvenida">Bienvenido a nuestra página web</h1>
-        <p>
-          VendemosTuCoche es una plataforma innovadora dedicada a la compra y venta de coches de
-          segunda mano de forma rápida, segura y transparente. Nuestro objetivo
-          es revolucionar la manera en que las personas compran y venden
-          vehículos, ofreciendo un espacio confiable donde particulares y
-          concesionarios puedan conectar directamente sin intermediarios
-          innecesarios.
-        </p>
-        <details>
-          <summary class="btn" aria-expanded="false">Ver más</summary>
-          <p>
-            A través de nuestra web y aplicación, los usuarios pueden publicar,
-            descubrir y negociar vehículos con total libertad, respaldados por
-            herramientas que garantizan la verificación del estado del coche,
-            historial de mantenimiento y precios justos según el mercado.
-          </p>
-          <p>
-            Creemos que vender o comprar un coche no debería ser complicado ni
-            arriesgado, por eso en VendemosTuCoche simplificamos el
-            proceso con una experiencia intuitiva, soporte personalizado y
-            servicios complementarios como tasación gratuita, financiación y
-            asistencia en trámites.
-          </p>
-          <p>
-            Nuestro compromiso es claro: hacer que cambiar de coche sea tan
-            fácil como cambiar de idea.
-          </p>
-        </details>
-      </div>
-    </section>
+    <!-- El 'container' limita el ancho y centra el bloque -->
+    <section id="inicio" class="container my-5" role="main" aria-labelledby="bienvenida">
 
-    <!-- 💼 Sección de SERVICIOS o proyectos -->
-    <section id="servicios" role="region" aria-labelledby="servicios-heading">
-      <div class="intro-servicios">
-        <h2 id="servicios-heading">Servicios</h2>
-        <p>
-          Publica, vende y compra coches con la seguridad y garantías que
-          necesitas.
-        </p>
-      </div>
+      <!-- La clase 'hero' ahora es una fila de Bootstrap -->
+      <!-- 'align-items-center' centra verticalmente el texto y la imagen -->
+      <div class="hero row g-0 align-items-center mx-auto">
 
-      <div class="servicios-container" role="list">
-        <div class="servicio cristal-empañado" role="article" aria-label="Servicio: Vende tu coche rápido y sin estrés">
-          <div class="servicio-header">
-            <img src="./images/empresa/vender.png" alt="imagen_vender" width="60" height="60" role="img" aria-hidden="false" aria-label="Icono vender">
-            <div>
-              <h3 id="servicio-vender">Vende tu coche rápido y sin estrés</h3>
-              <p>Publica tu coche de forma rápida, sencilla y 100% segura.</p>
-            </div>
-          </div>
-          <ul role="list">
-            <li role="listitem">Asesoría en la creación del anuncio.</li>
-            <li role="listitem">Verificación completa del historial del vehículo.</li>
-            <li role="listitem">Chats protegidos entre comprador y vendedor.</li>
-            <li role="listitem">Venta rápida con ofertas de concesionarios certificados.</li>
-          </ul>
-          <div class="botones">
-            <a href="publicarMiCoche" class="btn" role="button" aria-label="Publicar mi coche">Publicar mi coche</a>
-            <a href="./servicios.html#VendeTuCoche" class="btn info" role="button" aria-label="Más información sobre vender tu coche"
-              >Más información</a
-            >
-          </div>
+        <!-- COLUMNA IMAGEN:
+         'd-none' la oculta en móvil.
+         'd-lg-block' la muestra solo en pantallas grandes (Desktop).
+         'col-lg-5' ocupa 5 de 12 espacios en desktop. -->
+        <div class="col-lg-5 d-none d-lg-block">
+          <img src="./images/empresa/logoCocheDeLado-fondo.png" alt="cocheEmpresa" role="img"
+            aria-label="Imagen de coche de la empresa" class="img-fluid w-75 mt-5 mb-5">
+          <!-- 'img-fluid' hace que la imagen no se desborde -->
         </div>
 
-        <div class="servicio cristal-empañado" role="article" aria-label="Servicio: Compra con confianza">
-          <div class="servicio-header">
-            <img src="./images/empresa/confianza.png" alt="imagen_confianza" width="60" height="60" role="img" aria-hidden="false" aria-label="Icono confianza">
-            <div>
-              <h3 id="servicio-confianza">Compra con Confianza</h3>
+        <!-- COLUMNA TEXTO:
+         'col-12' en móvil (ancho completo).
+         'col-lg-7' en desktop. -->
+        <div id="intro" class="col-12 col-lg-7 p-4 p-md-5">
+          <h1 id="bienvenida" class="mb-3">Bienvenido a nuestra página web</h1>
+          <p class="lead">
+            VendemosTuCoche es una plataforma innovadora dedicada a la compra y venta de coches de
+            segunda mano de forma rápida, segura y transparente...
+          </p>
+
+          <details>
+            <summary class="btn btn-primary p-2" aria-expanded="false">Ver más</summary>
+            <div class="mt-3">
               <p>
-                Encuentra coches verificados con garantía y financiación
-                flexible.
+                A través de nuestra web y aplicación, los usuarios pueden publicar,
+                descubrir y negociar vehículos con total libertad...
+              </p>
+              <p>
+                Nuestro compromiso es claro: hacer que cambiar de coche sea tan
+                fácil como cambiar de idea.
               </p>
             </div>
-          </div>
-          <ul role="list">
-            <li role="listitem">
-              Informe técnico detallado y fotografías reales del vehiculo.
-            </li>
-            <li role="listitem">Reserva online del coche.</li>
-            <li role="listitem">Financiación personalizada.</li>
-            <li role="listitem">Garantía de hasta 12 meses.</li>
-          </ul>
-          <div class="botones">
-            <a href="cochesDisponibles" class="btn" role="button" aria-label="Ver coches disponibles">Ver coches disponibles</a>
-            <a href="solicitarFinanciacion" class="btn info" role="button" aria-label="Solicitar financiación">Solicitar financiación</a>
-          </div>
+          </details>
         </div>
+
       </div>
     </section>
 
-    <section class="testimonios" role="region" aria-labelledby="testimonios-heading" aria-label="Opiniones de clientes">
+    <!-- Eliminamos el container restrictivo. 'w-100' asegura el ancho total -->
+    <section id="servicios" class="w-100 py-5" role="region" aria-labelledby="servicios-heading">
+
+      <!-- Usamos container-fluid para que el contenido respire pero ocupe casi todo el ancho -->
+      <div class="container-fluid px-4 px-md-5">
+
+        <!-- Intro -->
+        <div class="text-center mb-5">
+          <h2 id="servicios-heading" class="display-5 fw-bold text-white">Servicios</h2>
+          <p class="lead text-light">
+            Publica, vende y compra coches con la seguridad y garantías que necesitas.
+          </p>
+        </div>
+
+        <!-- El row con g-4 da el espaciado (gap) que tenías en tu CSS -->
+        <div class="row g-4 justify-content-center">
+
+          <!-- Servicio 1: col-xl-5 para que no sea excesivamente ancho en pantallas gigantes -->
+          <div class="col-12 col-lg-6 col-xl-5">
+            <div class="servicio cristal-empañado h-100 p-4" role="article">
+              <div class="d-flex align-items-center mb-4">
+                <img src="./images/empresa/vender.png" alt="Icono" class="img-thumbnail-custom flex-shrink-0 me-3">
+                <div>
+                  <h3 class="h4 mb-1">Vende tu coche rápido y sin estrés</h3>
+                  <p class="mb-0">Publica tu coche de forma rápida, sencilla y 100% segura.</p>
+                </div>
+              </div>
+              <ul class="list-unstyled custom-check-list mb-4">
+                <li>Asesoría en la creación del anuncio.</li>
+                <li>Verificación completa del historial del vehículo.</li>
+                <li>Chats protegidos entre comprador y vendedor.</li>
+              </ul>
+              <div class="row g-4 mt-auto justify-content-center">
+                <!-- col-sm-6 hace que en móviles pequeños se pongan uno sobre otro y en tablets/PC al lado -->
+                <div class="col-12 col-sm-5">
+                  <a href="#" class="btn btn-servicio w-100" role="button">Publicar mi coche</a>
+                </div>
+                <div class="col-12 col-sm-5">
+                  <a href="#" class="btn btn-servicio w-100" role="button">Más información</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Servicio 2 -->
+          <div class="col-12 col-lg-6 col-xl-5">
+            <div class="servicio cristal-empañado h-100 p-4" role="article">
+              <div class="d-flex align-items-center mb-4">
+                <img src="./images/empresa/confianza.png" alt="Icono" class="img-thumbnail-custom flex-shrink-0 me-3">
+                <div>
+                  <h3 class="h4 mb-1">Compra con Confianza</h3>
+                  <p class="mb-0">Encuentra coches verificados con garantía y financiación.</p>
+                </div>
+              </div>
+              <ul class="list-unstyled custom-check-list mb-4">
+                <li>Informe técnico detallado y fotos reales.</li>
+                <li>Reserva online del coche.</li>
+                <li>Garantía de hasta 12 meses.</li>
+              </ul>
+              <div class="row g-4 mt-auto justify-content-center">
+                <!-- col-sm-6 hace que en móviles pequeños se pongan uno sobre otro y en tablets/PC al lado -->
+                <div class="col-12 col-sm-5">
+                  <a href="#" class="btn btn-servicio w-100" role="button">Publicar mi coche</a>
+                </div>
+                <div class="col-12 col-sm-5">
+                  <a href="#" class="btn btn-servicio w-100" role="button">Más información</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <section class="testimonios" role="region" aria-labelledby="titulo-testimonios">
       <div class="cabecera-testimonios">
-        <h2 id="testimonios-heading">Opiniones de Nuestros Clientes</h2>
-        <p class="intro">
-          Miles de usuarios ya confiaron en nosotros para comprar o vender su
-          coche. Estas son algunas de sus experiencias:
+        <h2 id="titulo-testimonios">Opiniones de Nuestros Clientes</h2>
+        <p class="intro" id="intro-testimonios">
+          Miles de usuarios ya confiaron en nosotros para comprar o vender su coche.
+          Estas son algunas de sus experiencias:
         </p>
       </div>
-      <div class="auto-marquee" role="list" aria-label="Carrusel de testimonios">
-        <div class="auto-marquee__track" role="list">
-          <article class="testimonio" role="article" aria-label="Testimonio de Munia Z., CLIENTA">
+
+      <div class="auto-marquee" role="list" aria-describedby="intro-testimonios" aria-live="off">
+
+        <!-- TRACK 1 -->
+        <div class="auto-marquee__track" role="presentation">
+
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Munia Z, clienta">
             <div class="contenedor-perfil">
-              <img class="perfil" src="./images/usuarios/Munia.png" alt="munia" role="img" aria-label="Foto de Munia">
-              <h2 class="autor">Munia Z. <br><span class="azul-claro">CLIENTA</span></h2>
+              <img class="perfil" src="./images/usuarios/Munia.png"
+                alt="Foto de perfil de Munia Z, clienta del servicio" />
+              <p class="autor">
+                Munia Z. <br />
+                <span class="azul-claro">CLIENTA</span>
+              </p>
             </div>
-            <div class="contenedor-estrellas" aria-hidden="true">
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 5 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
               <span class="estrella fuego">★</span>
             </div>
             <blockquote>
-              “Ya he usado el servicio dos veces. En ambas ocasiones el informe
-              fue claro y muy útil para negociar el precio del coche.”
+              “Ya he usado el servicio dos veces. En ambas ocasiones el informe fue claro y muy útil para negociar el
+              precio del coche.”
             </blockquote>
           </article>
 
-          <article title="Usuario" class="testimonio" role="article" aria-label="Testimonio de Antonio L., COMPRADOR">
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Antonio L, comprador">
             <div class="contenedor-perfil">
-              <img class="perfil" src="./images/usuarios/Antonio.png" alt="Antonio" role="img" aria-label="Foto de Antonio">
-              <h2 class="autor">Antonio L. <br ><span class="azul-claro">COMPRADOR</span></h2>
+              <img class="perfil" src="./images/usuarios/Antonio.png"
+                alt="Foto de perfil de Antonio L, comprador de vehículo" />
+              <p class="autor">
+                Antonio L. <br />
+                <span class="azul-claro">COMPRADOR</span>
+              </p>
             </div>
-            <div class="contenedor-estrellas" aria-hidden="true">
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 4 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
               <span class="estrella">★</span>
             </div>
             <blockquote>
-              “Excelente servicio. Revisaron el coche que quería comprar y me
-              enviaron un informe completo con fotos y detalles. 100 %
-              recomendable.”
+              “Excelente servicio. Revisaron el coche que quería comprar y me enviaron un informe completo con fotos y
+              detalles.”
             </blockquote>
           </article>
 
-          <!-- Repetidos: mantengo los mismos textos, sólo añado role/aria donde aplica -->
-          <article title="Usuario" class="testimonio" role="article" aria-label="Testimonio de Laia O., VENDEDORA">
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Laia O, vendedora">
             <div class="contenedor-perfil">
-              <img class="perfil" src="./images/usuarios/Laia.png" alt="laia" role="img" aria-label="Foto de Laia">
-              <h2 class="autor">Laia O. <br ><span class="azul-claro">VENDEDORA</span></h2>
+              <img class="perfil" src="./images/usuarios/Laia.png" alt="Foto de perfil de Laia O, vendedora de coche" />
+              <p class="autor">
+                Laia O. <br />
+                <span class="azul-claro">VENDEDORA</span>
+              </p>
             </div>
-            <div class="contenedor-estrellas" aria-hidden="true">
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 5 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
               <span class="estrella fuego">★</span>
             </div>
             <blockquote>
-              “Vendí mi coche en menos de una semana gracias a su revisión
-              detallada. Me ayudaron a fijar un precio justo y generó confianza
-              en los compradores.”
+              “Vendí mi coche en menos de una semana gracias a su revisión detallada.”
             </blockquote>
           </article>
 
-          <article title="Usuario" class="testimonio" role="article" aria-label="Testimonio de Oihan A., COMPRADOR">
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Oihan A, comprador">
             <div class="contenedor-perfil">
-              <img class="perfil" src="./images/usuarios/Oihan.png" alt="oihan1" role="img" aria-label="Foto de Oihan">
-              <h2 class="autor">Oihan A. <br ><span class="azul-claro">COMPRADOR</span></h2>
+              <img class="perfil" src="./images/usuarios/Oihan.png"
+                alt="Foto de perfil de Oihan A, comprador que evitó una compra arriesgada" />
+              <p class="autor">
+                Oihan A. <br />
+                <span class="azul-claro">COMPRADOR</span>
+              </p>
             </div>
-            <div class="contenedor-estrellas" aria-hidden="true">
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 5 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
               <span class="estrella fuego">★</span>
             </div>
             <blockquote>
-              “El informe técnico me ahorró una compra arriesgada. Muy
-              profesionales y puntuales en la entrega del reporte.”
+              “El informe técnico me ahorró una compra arriesgada.”
             </blockquote>
           </article>
 
-          <article title="Usuario" class="testimonio" role="article" aria-label="Testimonio de Laura V., TALLER ASOCIADO">
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Laura V, taller asociado">
             <div class="contenedor-perfil">
-              <img class="perfil" src="./images/usuarios/Laura.png" alt="laura" role="img" aria-label="Foto de Laura">
-              <h2 class="autor">Laura V.<br ><span class="azul-claro">TALLER ASOCIADO</span></h2>
+              <img class="perfil" src="./images/usuarios/Laura.png"
+                alt="Foto de perfil de Laura V, responsable de taller asociado" />
+              <p class="autor">
+                Laura V.<br />
+                <span class="azul-claro">TALLER ASOCIADO</span>
+              </p>
             </div>
-            <div class="contenedor-estrellas" aria-hidden="true">
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 4 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
               <span class="estrella">★</span>
             </div>
             <blockquote>
-              “Colaboramos con ellos en varias inspecciones. Su trato es cercano
-              y siempre cumplen con los estándares de calidad.”
+              “Siempre cumplen con los estándares de calidad.”
             </blockquote>
           </article>
 
-          <article title="Usuario" class="testimonio" role="article" aria-label="Testimonio de Aretx A., COMPRADOR">
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Aretx A, comprador remoto">
             <div class="contenedor-perfil">
-              <img class="perfil" src="./images/usuarios/Aretx.png" alt="aretx" role="img" aria-label="Foto de Aretx">
-              <h2 class="autor">Aretx A. <br><span class="azul-claro">COMPRADOR</span></h2>
+              <img class="perfil" src="./images/usuarios/Aretx.png"
+                alt="Foto de perfil de Aretx A, comprador desde otra ciudad" />
+              <p class="autor">
+                Aretx A. <br />
+                <span class="azul-claro">COMPRADOR</span>
+              </p>
             </div>
-            <div class="contenedor-estrellas" aria-hidden="true">
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella">★</span>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 3 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella">★</span>
               <span class="estrella">★</span>
             </div>
             <blockquote>
-              “Muy fácil todo el proceso. Pude revisar el coche desde otra
-              ciudad y tomar una decisión segura. Servicio 7/10.”
+              “Pude revisar el coche desde otra ciudad.”
+            </blockquote>
+          </article>
+
+        </div>
+
+        <!-- TRACK 2 (DUPLICADO MANTENIDO) -->
+        <div class="auto-marquee__track" role="presentation">
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Munia Z, clienta">
+            <div class="contenedor-perfil">
+              <img class="perfil" src="./images/usuarios/Munia.png"
+                alt="Foto de perfil de Munia Z, clienta del servicio" />
+              <p class="autor">
+                Munia Z. <br />
+                <span class="azul-claro">CLIENTA</span>
+              </p>
+            </div>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 5 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “Ya he usado el servicio dos veces. En ambas ocasiones el informe fue claro y muy útil para negociar el
+              precio del coche.”
+            </blockquote>
+          </article>
+
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Antonio L, comprador">
+            <div class="contenedor-perfil">
+              <img class="perfil" src="./images/usuarios/Antonio.png"
+                alt="Foto de perfil de Antonio L, comprador de vehículo" />
+              <p class="autor">
+                Antonio L. <br />
+                <span class="azul-claro">COMPRADOR</span>
+              </p>
+            </div>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 4 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Excelente servicio. Revisaron el coche que quería comprar y me enviaron un informe completo con fotos y
+              detalles.”
+            </blockquote>
+          </article>
+
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Laia O, vendedora">
+            <div class="contenedor-perfil">
+              <img class="perfil" src="./images/usuarios/Laia.png" alt="Foto de perfil de Laia O, vendedora de coche" />
+              <p class="autor">
+                Laia O. <br />
+                <span class="azul-claro">VENDEDORA</span>
+              </p>
+            </div>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 5 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “Vendí mi coche en menos de una semana gracias a su revisión detallada.”
+            </blockquote>
+          </article>
+
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Oihan A, comprador">
+            <div class="contenedor-perfil">
+              <img class="perfil" src="./images/usuarios/Oihan.png"
+                alt="Foto de perfil de Oihan A, comprador que evitó una compra arriesgada" />
+              <p class="autor">
+                Oihan A. <br />
+                <span class="azul-claro">COMPRADOR</span>
+              </p>
+            </div>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 5 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span>
+            </div>
+            <blockquote>
+              “El informe técnico me ahorró una compra arriesgada.”
+            </blockquote>
+          </article>
+
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Laura V, taller asociado">
+            <div class="contenedor-perfil">
+              <img class="perfil" src="./images/usuarios/Laura.png"
+                alt="Foto de perfil de Laura V, responsable de taller asociado" />
+              <p class="autor">
+                Laura V.<br />
+                <span class="azul-claro">TALLER ASOCIADO</span>
+              </p>
+            </div>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 4 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Siempre cumplen con los estándares de calidad.”
+            </blockquote>
+          </article>
+
+          <article class="testimonio" role="listitem" aria-label="Testimonio de Aretx A, comprador remoto">
+            <div class="contenedor-perfil">
+              <img class="perfil" src="./images/usuarios/Aretx.png"
+                alt="Foto de perfil de Aretx A, comprador desde otra ciudad" />
+              <p class="autor">
+                Aretx A. <br />
+                <span class="azul-claro">COMPRADOR</span>
+              </p>
+            </div>
+            <div class="contenedor-estrellas" role="img" aria-label="Valoración de 3 sobre 5 estrellas">
+              <span class="estrella fuego">★</span><span class="estrella fuego">★</span>
+              <span class="estrella fuego">★</span><span class="estrella">★</span>
+              <span class="estrella">★</span>
+            </div>
+            <blockquote>
+              “Pude revisar el coche desde otra ciudad.”
             </blockquote>
           </article>
         </div>
 
-        <div class="auto-marquee__track" role="list" aria-hidden="true">
-          <!-- track duplicado: marcado como list (aria-hidden true por duplicación de contenido) -->
-          <!-- artículos dentro replicados: mantengo los mismos textos, añado aria-label -->
-          <article title="Usuario" class="testimonio" role="article" aria-label="Testimonio duplicado de Munia Z., CLIENTA">
-            <div class="contenedor-perfil">
-              <img class="perfil" src="./images/usuarios/Munia.png" alt="munia2" role="img" aria-label="Foto de Munia">
-              <h2 class="autor">Munia Z. <br ><span class="azul-claro">CLIENTA</span></h2>
-            </div>
-            <div class="contenedor-estrellas" aria-hidden="true">
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-              <span class="estrella fuego">★</span>
-            </div>
-            <blockquote>
-              “Ya he usado el servicio dos veces. En ambas ocasiones el informe
-              fue claro y muy útil para negociar el precio del coche.”
-            </blockquote>
-          </article>
-
-          <!-- ... resto de artículos duplicados con los mismos atributos aria ... -->
-        </div>
       </div>
     </section>
 
-    <!-- ⚙️ Pie de página -->
-    <footer class="footer" role="contentinfo" aria-label="Pie de página con información de contacto y enlaces legales">
-      <div class="footer-contenido">
-        <section class="footer-soporte" role="region" aria-labelledby="footer-soporte-heading">
-          <h3 id="footer-soporte-heading">¿Necesitas ayuda?</h3>
-          <p>
-            Estamos aquí para resolver tus dudas y acompañarte durante todo el
-            proceso.
-          </p>
 
-          <ul class="footer-contacto" role="list">
-            <li role="listitem">
-              📞 <strong>Teléfono / WhatsApp:</strong>
-              <a href="tel:+34900000000">+34 900 000 000</a>
-            </li>
-            <li role="listitem">
-              📧 <strong>Email:</strong>
-              <a href="mailto:soporte@vendemostucoche.com"
-                >soporte@vendemostucoche.com</a
-              >
-            </li>
-            <li role="listitem">🕓 <strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
-          </ul>
-        </section>
+    <!-- La clase 'w-100' asegura que el fondo azul oscuro cubra toda la pantalla -->
+    <footer class="footer bg-dark-custom w-100 py-5 mt-5" role="contentinfo">
 
-        <!-- Redes sociales -->
-        <section title="Redes Sociales" class="footer-redes" role="region" aria-labelledby="redes-heading">
-          <h2 id="redes-heading">Nuestras Redes sociales</h2>
-          <a href="https://www.facebook.com/VendemosTuCoche" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
-            <img src="./images/icon/Facebook.svg" alt="Facebook" role="img" aria-hidden="true">
-          </a>
-          <a href="https://www.twitter.com/VendemosTuCoche" target="_blank" aria-label="Twitter" rel="noopener noreferrer">
-            <img src="./images/icon/X.svg" alt="Twitter" role="img" aria-hidden="true">
-          </a>
-          <a href="https://www.instagram.com/VendemosTuCoche" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
-            <img src="./images/icon/Instagram.svg" alt="Insta" role="img" aria-hidden="true">
-          </a>
-          <a href="https://www.linkedin.com/company/VendemosTuCoche" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
-            <img src="./images/icon/Linkedin.svg" alt="Linkedin" role="img" aria-hidden="true">
-          </a>
-        </section>
+      <!-- 'container-fluid' permite que el contenido se expanda, px-md-5 da margen interno -->
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row gy-4 align-items-start">
 
-        <section class="footer-info" role="region" aria-labelledby="footer-info-heading">
-          <h2 id="footer-info-heading">© 2025 VendemosTuCoche</h2>
-          <p>Transacciones seguras, rápidas y sin estrés.</p>
-          <nav class="footer-nav" role="navigation" aria-label="Enlaces legales">
-            <a href="aviso-legal.html">Aviso legal</a>
-            <a href="privacidad.html">Privacidad</a>
-            <a href="cookies.html">Cookies</a>
-          </nav>
-        </section>
+          <!-- Bloque 1: Soporte -->
+          <section class="col-12 col-md-8" aria-labelledby="footer-soporte-heading">
+            <h3 id="footer-soporte-heading" class="h5 text-white mb-3">¿Necesitas ayuda?</h3>
+            <p class="text-muted-custom mb-4">
+              Estamos aquí para resolver tus dudas y acompañarte durante todo el proceso.
+            </p>
+
+            <ul class="list-unstyled footer-contacto" role="list">
+              <li class="mb-2">
+                <span class="me-2">📞</span><strong>Teléfono / WhatsApp:</strong>
+                <a href="tel:+34900000000" class="link-custom ms-1">+34 900 000 000</a>
+              </li>
+              <li class="mb-2">
+                <span class="me-2">📧</span><strong>Email:</strong>
+                <a href="mailto:soporte@vendemostucoche.com" class="link-custom ms-1">soporte@vendemostucoche.com</a>
+              </li>
+              <li class="mb-2"><span class="me-2">🕓</span><strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
+            </ul>
+          </section>
+
+          <!-- Bloque 2: Redes Sociales -->
+          <section class="col-12 col-md-4 text-md-end" aria-labelledby="redes-heading">
+            <h2 id="redes-heading" class="h6 text-white text-uppercase mb-3">Nuestras Redes</h2>
+            <!-- d-flex justify-content-md-end alinea a la derecha solo en PC -->
+            <div class="d-flex justify-content-start justify-content-md-end gap-3">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <img src="./images/icon/Facebook.svg" alt="Facebook" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter">
+                <img src="./images/icon/X.svg" alt="Twitter" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <img src="./images/icon/Instagram.svg" alt="Instagram" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">
+                <img src="./images/icon/Linkedin.svg" alt="Linkedin" width="24" height="24">
+              </a>
+            </div>
+          </section>
+
+          <!-- Bloque 3: Copyright y Legal (Ancho total) -->
+          <div class="col-12 border-top border-secondary pt-4 mt-5 text-center">
+            <section class="footer-info">
+              <h2 class="h6 fw-bold text-white mb-1">© 2026 VendemosTuCoche</h2>
+              <p class="small text-muted-custom">Transacciones seguras, rápidas y sin estrés.</p>
+              <nav class="d-flex justify-content-center flex-wrap gap-3 mt-3" aria-label="Enlaces legales">
+                <a href="aviso-legal.html" class="link-custom small">Aviso legal</a>
+                <a href="privacidad.html" class="link-custom small">Privacidad</a>
+                <a href="cookies.html" class="link-custom small">Cookies</a>
+              </nav>
+            </section>
+          </div>
+
+        </div>
       </div>
     </footer>
 
     <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5.3 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
   </body>
+
 </html>

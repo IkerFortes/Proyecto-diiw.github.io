@@ -13,51 +13,47 @@ main {
   display: flex;
   flex-direction: column;
 }
-
-/* ===== HERO ===== */
 .hero-servicios {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem;
-  margin: 0 3.125rem 1.25rem 3.125rem;
+  /* Sustituimos márgenes fijos por márgenes responsivos */
+  margin: 2rem auto;
+  max-width: 95%; /* Para que no pegue a los bordes de la pantalla */
+
+  /* Tus colores y estilo */
   background-color: #0f172a;
-    color: #ffffff;
-  font-weight: 700;
-  text-align: center;
+  color: #ffffff;
   border-radius: 0.75rem;
   transition: transform 0.3s ease;
   overflow: hidden;
-  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
 }
 
+/* Efecto hover que tenías */
 .hero-servicios:hover {
-  transform: translateY(-0.1875rem);
+  transform: translateY(-5px);
 }
 
-.hero-container {
-  flex: 1 1 18.75rem;
-  min-width: 15.625rem;
-  margin-right: 1.25rem;
-}
-
-.hero-servicios img {
-  flex: 0 1 21.875rem;
-  width: 100%;
-  max-width: 28.125rem;
-  object-fit: cover;
-  padding: 0;
+/* Estilo de la Imagen (Mejorado) */
+.custom-hero-img {
   border: 0.1875rem solid #1e293b;
   background-color: #3b82f6;
   border-radius: 0.625rem;
-  transition: border-color 0.3s ease, filter 0.3s ease;
-  margin-top: 0.625rem;
+  transition: all 0.3s ease;
+  /* Bootstrap img-fluid ya da el width: 100% */
 }
 
-.hero-servicios img:hover {
+.custom-hero-img:hover {
   border-color: #01546f;
   filter: brightness(1.05);
+  transform: scale(1.02); /* Toque extra de 2026 */
+}
+
+/* Ajuste de tipografía */
+#h1-servicios {
+  margin-bottom: 1rem;
+}
+
+#hero-desc {
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 /* SERVICIOS */
@@ -141,69 +137,73 @@ main {
   border-color: #3b82f6;
   box-shadow: 0 0.25rem 1rem rgba(59, 130, 246, 0.15);
 }
-
-/* EL ASIDE */
 .aside-servicios {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  position: sticky;
-  top: 11.5625rem;
-  align-self: start;
-  width: 18.75rem;
+  /* Posicionamiento Bootstrap sustituye a grid-column */
+  top: 2rem !important; /* Ajusta la distancia desde el techo al hacer scroll */
+  z-index: 1020;
+
+  /* Tu estilo personalizado */
+  width: 100%; /* Deja que el col-md de Bootstrap controle el ancho */
+  max-width: 18.75rem;
   padding: 1.25rem 1.5rem;
-  margin-bottom: 32.8125rem;
   background-color: #e8f0fe;
   border: 0.0625rem solid #bfdbfe;
   border-top-right-radius: 0.75rem;
-  border-end-end-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
   font-family: "Inter", sans-serif;
 }
 
-.aside-servicios h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
-}
-
-/* Navegación secundaria */
-.nav-secundaria ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0.9375rem;
-}
-
-.nav-secundaria li {
-  margin-bottom: 0.25rem;
-}
-
+/* Colores y tipografía de tus enlaces */
 .nav-secundaria a {
   color: #001D3D;
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
 }
 
 .nav-secundaria a:hover {
-  color: #000000;
+  color: #0d6efd; /* Color primario de Bootstrap */
+  padding-left: 5px; /* Pequeño efecto visual */
 }
 
-.info-extra ul {
-  list-style: none;
-  padding: 0;
-}
-
+/* Ajustes de info extra */
 .info-extra li {
-  margin-bottom: 0.25rem;
   color: #334155;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
-.info-extra li::before {
-  content: "•";
-  color: #3b82f6;
-  margin-right: 0.375rem;
+/* Ocultar texto para lectores de pantalla (Clase nativa de Bootstrap) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .aside-servicios.sticky-top {
+    /* 1. Margen de entrada (donde empieza antes de scrollear) */
+    margin-top: 3rem !important;
+    margin-bottom: 16rem !important;
+
+    /* 2. Distancia al techo cuando ya estás haciendo scroll */
+    /* Ajusta este valor según la altura real de tu Nav + el aire que quieras dejar */
+    top: 8rem !important;
+    bottom: 10rem !important;
+
+    /* Tu estilo visual */
+    width: 18.75rem;
+    padding: 1.5rem;
+    background-color: #e8f0fe;
+    border: 0.0625rem solid #bfdbfe;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    z-index: 12;
+  }
 }
 
 /* DESPUÉS DE LOS SERVICIOS */

@@ -9,8 +9,14 @@
     <meta name="author" content="Iker Fortes">
     <meta name="description"
       content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente.">
+
     <!-- Estilos e impresión -->
     <title>VendemosTuCoche - Servicios</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="icon" href="./images/empresa/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/print.css" media="print">
     <link rel="stylesheet" href="css/mains/main-servicios.css">
@@ -20,71 +26,129 @@
   </head>
 
   <body id="servicios-body">
-    <header role="banner"> <a href="condiciones" title="condiciones" aria-label="Ir a condiciones">
-        <div id="contenedor-logo" aria-labelledby="logo-desc"> <img src="./images/empresa/logo.png" alt="Logo_empresa"
-            width="100" id="logo"> </div>
-      </a>
-      <!-- Checkbox + label para menú móvil (checkbox-hack) -->
-      <input type="checkbox" id="menu-toggle" aria-controls="menu-principal" aria-label="Alternar menú de navegación"
-        aria-expanded="false">
-      <label for="menu-toggle" class="hamburger" role="button" aria-controls="menu-principal" aria-pressed="false"
-        aria-label="Abrir o cerrar menú de navegación">
-        <span class="sr-only">Abrir menú de navegación</span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </label>
+    <header role="banner" class="navbar navbar-expand-lg fixed-top shadow-sm p-0">
+      <div class="container-fluid px-4 h-100">
 
-      <nav class="menu-principal" id="menu-principal" role="navigation" aria-label="Menú principal">
-        <ul role="list">
-          <li><a href="./index.html" class="link" aria-label="Ir a Inicio">INICIO</a></li>
-          <li><a href="#" class="link" aria-current="page" aria-label="Ir a Servicios">SERVICIOS</a></li>
-          <li><a href="./mantenimiento.html" class="link" aria-label="Ir a Opiniones">OPINIONES</a></li>
-          <li><a href="./contacto.html" class="link" aria-label="Ir a Contacto">CONTACTO</a></li>
-        </ul>
-      </nav>
-      <div id="usuario" aria-live="polite">
-        <a href="./login.html" class="link-usuario" aria-label="Iniciar sesión en VendemosTuCoche">
-          <img src="./images/usuarios/Login.png" alt="" class="perfil" aria-hidden="true">
-          <span>INICIAR SESIÓN</span>
+        <!-- LOGO (Izquierda) -->
+        <a href="index.html" class="navbar-brand">
+          <div id="contenedor-logo">
+            <img src="./images/empresa/logo.png" alt="Logo" id="logo">
+          </div>
         </a>
+
+        <!-- CONTENEDOR DERECHO: Usuario y Botón Hamburguesa (ms-auto empuja a la derecha) -->
+        <div class="d-flex align-items-center ms-auto">
+
+          <!-- MENÚ (Se colapsa/despliega por debajo de los elementos anteriores) -->
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <!-- Los enlaces ocupan todo el ancho disponible al colapsar -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link link" href="./index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./servicios.html">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./mantenimiento.html">OPINIONES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./contacto.html">CONTACTO</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- USUARIO (Siempre visible, me-3 añade espacio a la derecha) -->
+          <div id="usuario" class="me-3">
+            <a href="./login.html" class="link-usuario">
+              <img src="./images/usuarios/Login.png" alt="Perfil" class="perfil">
+              <!-- El texto solo aparece en pantallas grandes -->
+              <span class="small d-none d-md-inline">INICIAR SESIÓN</span>
+            </a>
+          </div>
+
+          <!-- Botón Hamburguesa (Abre el Offcanvas, solo visible en móvil/tablet) -->
+          <!-- data-bs-target ahora apunta a "#offcanvasMenu" -->
+          <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span style="filter: invert(1);">
+              <img src="./images/web/hambueger.png" alt="hamburguesa" width="40" height="40">
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasMenuLabel">Navegación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- navbar-nav y flex-column aseguran que los enlaces se apilan verticalmente en el sidebar -->
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 flex-column">
+            <li class="nav-item">
+              <a class="nav-link link" href="#inicio">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./servicios.html">SERVICIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./mantenimiento.html">OPINIONES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./contacto.html">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
-    <aside class="aside-servicios" role="complementary" aria-labelledby="aside-explora">
-      <nav class="nav-secundaria" role="navigation" aria-label="Navegación secundaria">
-        <h3 id="aside-explora">Explora nuestros servicios</h3>
-        <ul role="list">
-          <li><a href="#VendeTuCoche" aria-label="Ir a Vende tu coche rápido">Vende tu coche rápido</a></li>
-          <li><a href="#CompraConConfianza" aria-label="Ir a Compra con confianza">Compra con confianza</a></li>
-          <li><a href="#FinanciaTuCoche" aria-label="Ir a Financiación">Financiación</a></li>
-          <li><a href="#Garantia" aria-label="Ir a Garantía">Garantía</a></li>
-          <li><a href="#PreguntasFrecuentes" aria-label="Ir a Preguntas frecuentes">Preguntas frecuentes</a></li>
+    <!-- El Aside ahora vive dentro de una columna de Bootstrap (ej: col-md-3) -->
+    <aside class="aside-servicios sticky-top shadow-sm d-none d-lg-block" role="complementary"
+      aria-labelledby="aside-explora">
+      <nav class="nav-secundaria mb-4" role="navigation">
+        <h3 id="aside-explora" class="h6 fw-bold">Explora nuestros servicios</h3>
+        <ul class="list-unstyled" role="list">
+          <li><a href="#VendeTuCoche">Vende tu coche rápido</a></li>
+          <li><a href="#CompraConConfianza">Compra con confianza</a></li>
+          <li><a href="#FinanciaTuCoche">Financiación</a></li>
+          <li><a href="#Garantia">Garantía</a></li>
+          <li><a href="#PreguntasFrecuentes">Preguntas frecuentes</a></li>
         </ul>
       </nav>
 
-      <section class="info-extra" role="region" aria-labelledby="porque-elegirnos">
-        <h3 id="porque-elegirnos">Por qué elegirnos</h3>
-        <ul role="list" aria-describedby="porque-elegirnos-desc">
-          <li><span aria-hidden="true">✅</span> Procesos 100% seguros</li>
-          <li><span aria-hidden="true">⚙️</span> Asesoría personalizada</li>
-          <li><span aria-hidden="true">🧾</span> Vehículos verificados</li>
-          <li><span aria-hidden="true">🚗</span> Garantía hasta 12 meses</li>
-          <li><span aria-hidden="true">🤝</span> Concesionarios certificados</li>
+      <section class="info-extra" role="region">
+        <h3 class="h6 fw-bold">Por qué elegirnos</h3>
+        <ul class="list-unstyled" role="list">
+          <li>✅ Procesos 100% seguros</li>
+          <li>⚙️ Asesoría personalizada</li>
+          <li>🧾 Vehículos verificados</li>
         </ul>
-        <p id="porque-elegirnos-desc" class="sr-only">Listado de ventajas y garantías del servicio.</p>
       </section>
     </aside>
+
     <main role="main" aria-label="Contenido principal">
-      <section class="hero-servicios" role="region" aria-labelledby="inicio">
-        <div class="hero-container" id="inicio">
-          <h1 id="h1-servicios">Descubre nuestros servicios</h1>
-          <p id="hero-desc">
-            VendemosTuCoche te acompaña en cada paso: vender, comprar o financiar
-            tu coche de forma rápida, segura y transparente.
-          </p>
+      <section class="hero-servicios container-fluid shadow" role="region" aria-labelledby="h1-servicios">
+        <div class="row align-items-center justify-content-center p-4 p-md-5">
+
+          <!-- Contenedor de Texto -->
+          <div class="col-12 col-lg-6 hero-text-container mb-4 mb-lg-0">
+            <h1 id="h1-servicios" class="display-5 fw-bold">Descubre nuestros servicios</h1>
+            <p id="hero-desc" class="lead">
+              VendemosTuCoche te acompaña en cada paso: vender, comprar o financiar
+              tu coche de forma rápida, segura y transparente.
+            </p>
+          </div>
+
+          <!-- Contenedor de Imagen -->
+          <div class="col-12 col-lg-5 text-center">
+            <img src="./images/empresa/servicios.png" alt="Servicios" class="img-fluid custom-hero-img" role="img"
+              aria-describedby="hero-desc">
+          </div>
+
         </div>
-        <img src="./images/empresa/servicios.png" alt="Servicios" role="img" aria-describedby="hero-desc">
       </section>
       <div id="servicios">
         <article id="VendeTuCoche" class="servicio cristal-empañado" role="region" aria-labelledby="h2-vende"
@@ -393,62 +457,78 @@
       </section>
     </main>
 
-    <!-- ⚙️ Pie de página -->
-    <footer class="footer" role="contentinfo" aria-labelledby="footer-title">
-      <div class="footer-contenido">
-        <section class="footer-soporte" role="region" aria-labelledby="soporte-title" aria-describedby="soporte-desc">
-          <h3 id="soporte-title">¿Necesitas ayuda?</h3>
-          <p id="soporte-desc">
-            Estamos aquí para resolver tus dudas y acompañarte durante todo el
-            proceso.
-          </p>
+    <!-- Pie de página -->
+    <!-- La clase 'w-100' asegura que el fondo azul oscuro cubra toda la pantalla -->
+    <footer class="footer bg-dark-custom w-100 py-5 mt-5" role="contentinfo">
 
-          <ul class="footer-contacto" role="list" aria-label="Información de contacto">
-            <li>
-              📞 <strong>Teléfono / WhatsApp:</strong>
-              <a href="tel:+34900000000" aria-label="Llamar a VendemosTuCoche al +34 900 000 000">+34 900 000 000</a>
-            </li>
-            <li>
-              📧 <strong>Email:</strong>
-              <a href="mailto:soporte@vendemostucoche.com"
-                aria-label="Enviar email a soporte@vendemostucoche.com">soporte@vendemostucoche.com</a>
-            </li>
-            <li>🕓 <strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
-          </ul>
-        </section>
+      <!-- 'container-fluid' permite que el contenido se expanda, px-md-5 da margen interno -->
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row gy-4 align-items-start">
 
-        <!-- Redes sociales -->
-        <section title="Redes Sociales" class="footer-redes" role="region" aria-labelledby="redes-title">
-          <h2 id="redes-title">Nuestras Redes sociales</h2>
-          <a href="https://www.facebook.com/VendemosTuCoche" target="_blank" aria-label="Facebook de VendemosTuCoche"
-            rel="noopener noreferrer">
-            <img src="./images/icon/Facebook.svg" alt="Facebook" role="img">
-          </a>
-          <a href="https://www.twitter.com/VendemosTuCoche" target="_blank" aria-label="Twitter de VendemosTuCoche"
-            rel="noopener noreferrer">
-            <img src="./images/icon/X.svg" alt="Twitter" role="img">
-          </a>
-          <a href="https://www.instagram.com/VendemosTuCoche" target="_blank" aria-label="Instagram de VendemosTuCoche"
-            rel="noopener noreferrer">
-            <img src="./images/icon/Instagram.svg" alt="Instagram" role="img">
-          </a>
-          <a href="https://www.linkedin.com/company/VendemosTuCoche" target="_blank"
-            aria-label="LinkedIn de VendemosTuCoche" rel="noopener noreferrer">
-            <img src="./images/icon/Linkedin.svg" alt="Linkedin" role="img">
-          </a>
-        </section>
+          <!-- Bloque 1: Soporte -->
+          <section class="col-12 col-md-8" aria-labelledby="footer-soporte-heading">
+            <h3 id="footer-soporte-heading" class="h5 text-white mb-3">¿Necesitas ayuda?</h3>
+            <p class="text-muted-custom mb-4">
+              Estamos aquí para resolver tus dudas y acompañarte durante todo el proceso.
+            </p>
 
-        <section class="footer-info" role="region" aria-labelledby="footer-title">
-          <h2 id="footer-title">© 2025 VendemosTuCoche</h2>
-          <p>Transacciones seguras, rápidas y sin estrés.</p>
-          <nav class="footer-nav" role="navigation" aria-label="Enlaces legales">
-            <a href="aviso-legal.html" aria-label="Aviso legal">Aviso legal</a>
-            <a href="privacidad.html" aria-label="Política de privacidad">Privacidad</a>
-            <a href="cookies.html" aria-label="Política de cookies">Cookies</a>
-          </nav>
-        </section>
+            <ul class="list-unstyled footer-contacto" role="list">
+              <li class="mb-2">
+                <span class="me-2">📞</span><strong>Teléfono / WhatsApp:</strong>
+                <a href="tel:+34900000000" class="link-custom ms-1">+34 900 000 000</a>
+              </li>
+              <li class="mb-2">
+                <span class="me-2">📧</span><strong>Email:</strong>
+                <a href="mailto:soporte@vendemostucoche.com" class="link-custom ms-1">soporte@vendemostucoche.com</a>
+              </li>
+              <li class="mb-2"><span class="me-2">🕓</span><strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
+            </ul>
+          </section>
+
+          <!-- Bloque 2: Redes Sociales -->
+          <section class="col-12 col-md-4 text-md-end" aria-labelledby="redes-heading">
+            <h2 id="redes-heading" class="h6 text-white text-uppercase mb-3">Nuestras Redes</h2>
+            <!-- d-flex justify-content-md-end alinea a la derecha solo en PC -->
+            <div class="d-flex justify-content-start justify-content-md-end gap-3">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <img src="./images/icon/Facebook.svg" alt="Facebook" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter">
+                <img src="./images/icon/X.svg" alt="Twitter" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <img src="./images/icon/Instagram.svg" alt="Instagram" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">
+                <img src="./images/icon/Linkedin.svg" alt="Linkedin" width="24" height="24">
+              </a>
+            </div>
+          </section>
+
+          <!-- Bloque 3: Copyright y Legal (Ancho total) -->
+          <div class="col-12 border-top border-secondary pt-4 mt-5 text-center">
+            <section class="footer-info">
+              <h2 class="h6 fw-bold text-white mb-1">© 2026 VendemosTuCoche</h2>
+              <p class="small text-muted-custom">Transacciones seguras, rápidas y sin estrés.</p>
+              <nav class="d-flex justify-content-center flex-wrap gap-3 mt-3" aria-label="Enlaces legales">
+                <a href="aviso-legal.html" class="link-custom small">Aviso legal</a>
+                <a href="privacidad.html" class="link-custom small">Privacidad</a>
+                <a href="cookies.html" class="link-custom small">Cookies</a>
+              </nav>
+            </section>
+          </div>
+
+        </div>
       </div>
     </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5.3 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
 
   </body>
 

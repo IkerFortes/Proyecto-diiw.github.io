@@ -1,64 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
   <!-- ENLACE DE SALTO -->
-  <a href="#inicio" class="skip-link" role="link" aria-label="Saltar al contenido principal">Saltar al contenido principal</a>
+  <a href="#inicio" class="skip-link" role="link" aria-label="Saltar al contenido principal">Saltar al contenido
+    principal</a>
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Iker Fortes">
-    <meta name="description" content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente.">
+    <meta name="description"
+      content="VendemosTuCoche - Compra y venta de vehículos de forma rápida, segura y transparente.">
     <!-- Estilos e impresión -->
     <title>VendemosTuCoche - Contacto</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="icon" href="./images/empresa/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/main.css" >
-    <link rel="stylesheet" href="css/responsive/contacto.css" >
-    <link rel="stylesheet" href="css/secciones/contacto.css" >
-    <link rel="stylesheet" href="css/print.css" media="print" >
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive/contacto.css">
+    <link rel="stylesheet" href="css/secciones/contacto.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
   </head>
+
   <body id="body-contacto">
 
-    <header role="banner">
-      <a href="condiciones" title="condiciones">
-        <div id="contenedor-logo">
-          <img src="./images/empresa/logo.png" alt="Logo_empresa"  width="100" id="logo">
-        </div>
-      </a>
+    <header role="banner" class="navbar navbar-expand-lg fixed-top shadow-sm p-0">
+      <div class="container-fluid px-4 h-100">
 
-      <!-- Checkbox + label para menú móvil (checkbox-hack) -->
-      <input type="checkbox" id="menu-toggle" aria-controls="menu-principal" aria-expanded="false" aria-label="Alternar menú de navegación">
-      <label for="menu-toggle" class="hamburger" aria-hidden="false">
-        <span class="sr-only">Abrir menú de navegación</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
-      <nav class="menu-principal" id="menu-principal" role="navigation" aria-label="Menú principal">
-        <ul>
-          <li><a href="./index.html" class="link">INICIO</a></li>
-          <li><a href="./servicios.html" class="link">SERVICIOS</a></li>
-          <li><a href="./mantenimiento.html" class="link">OPINIONES</a></li>
-          <li><a href="#" class="link">CONTACTO</a></li>
-        </ul>
-      </nav>
-      <div id="usuario" role="region" aria-label="Acceso de usuario">
-        <a href="./login.html" class="link-usuario" aria-describedby="login-desc">
-          <img src="./images/usuarios/Login.png" alt="" class="perfil" aria-hidden="true">
-          <span id="login-desc">INICIAR SESIÓN</span>
+        <!-- LOGO (Izquierda) -->
+        <a href="index.html" class="navbar-brand">
+          <div id="contenedor-logo">
+            <img src="./images/empresa/logo.png" alt="Logo" id="logo">
+          </div>
         </a>
+
+        <!-- CONTENEDOR DERECHO: Usuario y Botón Hamburguesa (ms-auto empuja a la derecha) -->
+        <div class="d-flex align-items-center ms-auto">
+
+          <!-- MENÚ (Se colapsa/despliega por debajo de los elementos anteriores) -->
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <!-- Los enlaces ocupan todo el ancho disponible al colapsar -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link link" href="./index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./servicios.html">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./mantenimiento.html">OPINIONES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./contacto.html">CONTACTO</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- USUARIO (Siempre visible, me-3 añade espacio a la derecha) -->
+          <div id="usuario" class="me-3">
+            <a href="./login.html" class="link-usuario">
+              <img src="./images/usuarios/Login.png" alt="Perfil" class="perfil">
+              <!-- El texto solo aparece en pantallas grandes -->
+              <span class="small d-none d-md-inline">INICIAR SESIÓN</span>
+            </a>
+          </div>
+
+          <!-- Botón Hamburguesa (Abre el Offcanvas, solo visible en móvil/tablet) -->
+          <!-- data-bs-target ahora apunta a "#offcanvasMenu" -->
+          <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span style="filter: invert(1);">
+              <img src="./images/web/hambueger.png" alt="hamburguesa" width="40" height="40">
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasMenuLabel">Navegación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- navbar-nav y flex-column aseguran que los enlaces se apilan verticalmente en el sidebar -->
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 flex-column">
+            <li class="nav-item">
+              <a class="nav-link link" href="./inicio">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./servicios.html">SERVICIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./mantenimiento.html">OPINIONES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./contacto.html">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main id="inicio" role="main" aria-labelledby="contacto-titulo">
-      <section class="hero-contacto" role="region" aria-labelledby="contacto-titulo">
-        <h1 id="contacto-titulo">Estamos aquí para ayudarte</h1>
-        <p>
-          En VendemosTuCoche queremos que tu experiencia sea rápida, sencilla y
-          totalmente transparente. Si tienes dudas sobre nuestros servicios,
-          necesitas asistencia con tu compra o venta, o quieres visitarnos,
-          estamos a tu disposición para orientarte en cada paso.
-        </p>
+      <section class="hero-contacto container shadow-sm mt-5" role="region" aria-labelledby="contacto-titulo">
+        <div class="row justify-content-center p-4 p-md-5">
+
+          <div class="col-12 col-lg-10 text-center" id="intro">
+            <h1 id="contacto-titulo" class="fw-bold mb-3">Estamos aquí para ayudarte</h1>
+            <p class="lead mx-auto">
+              En VendemosTuCoche queremos que tu experiencia sea rápida, sencilla y
+              totalmente transparente. Si tienes dudas sobre nuestros servicios,
+              necesitas asistencia con tu compra o venta, o quieres visitarnos,
+              estamos a tu disposición para orientarte en cada paso.
+            </p>
+          </div>
+
+        </div>
       </section>
 
       <!-- SECCIÓN DE CONTACTO -->
@@ -71,66 +132,59 @@
 
         <div class="contenedor-contacto">
           <!-- Formulario -->
-          <form class="formulario-contacto" id="formulario-contacto" role="form" aria-labelledby="contacto-h2" aria-describedby="contacto-intro" novalidate>
+          <form class="formulario-contacto" id="formulario-contacto" role="form" aria-labelledby="contacto-h2"
+            aria-describedby="contacto-intro" novalidate>
             <table role="presentation">
               <tr>
                 <td><label for="nombre">Nombre</label></td>
                 <td>
-                  <input type="text" id="nombre" name="nombre" required aria-required="true" aria-invalid="false" aria-describedby="nombre-desc">
+                  <input type="text" id="nombre" name="nombre" required aria-required="true" aria-invalid="false"
+                    aria-describedby="nombre-desc">
                   <span id="nombre-desc" class="sr-only">Introduce tu nombre completo</span>
                 </td>
               </tr>
               <tr>
                 <td><label for="correo">Correo electrónico</label></td>
                 <td>
-                  <input type="email" id="correo" name="correo" required aria-required="true" aria-invalid="false" aria-describedby="correo-desc">
+                  <input type="email" id="correo" name="correo" required aria-required="true" aria-invalid="false"
+                    aria-describedby="correo-desc">
                   <span id="correo-desc" class="sr-only">Introduce una dirección de correo válida</span>
                 </td>
               </tr>
               <tr>
                 <td><label for="telefono">Teléfono</label></td>
-                <td><input type="tel" id="telefono" name="telefono" aria-invalid="false" aria-describedby="telefono-desc" >
-                    <span id="telefono-desc" class="sr-only">Opcional: número de teléfono con indicativo</span>
+                <td><input type="tel" id="telefono" name="telefono" aria-invalid="false"
+                    aria-describedby="telefono-desc">
+                  <span id="telefono-desc" class="sr-only">Opcional: número de teléfono con indicativo</span>
                 </td>
               </tr>
               <tr>
                 <td><label for="mensaje">Mensaje</label></td>
                 <td>
-                  <textarea
-                    id="mensaje"
-                    name="mensaje"
-                    rows="5"
-                    required
-                    aria-required="true"
-                    aria-invalid="false"
-                    aria-describedby="mensaje-desc"
-                  ></textarea>
+                  <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true" aria-invalid="false"
+                    aria-describedby="mensaje-desc"></textarea>
                   <span id="mensaje-desc" class="sr-only">Escribe tu consulta o mensaje</span>
                 </td>
               </tr>
               <tr>
                 <td colspan="2">
-                  <input
-                    type="checkbox"
-                    id="privacidad"
-                    name="privacidad"
-                    required
-                    aria-required="true"
-                    aria-checked="false"
-                    aria-describedby="privacidad-desc"
-                  >
+                  <input type="checkbox" id="privacidad" name="privacidad" required aria-required="true"
+                    aria-checked="false" aria-describedby="privacidad-desc">
                   <label for="privacidad">
                     Acepto la
                     <a href="privacidad.html">política de privacidad</a>.
                   </label>
-                  <span id="privacidad-desc" class="sr-only">Debe aceptar la política de privacidad para enviar el formulario</span>
+                  <span id="privacidad-desc" class="sr-only">Debe aceptar la política de privacidad para enviar el
+                    formulario</span>
                 </td>
               </tr>
             </table>
           </form>
           <div role="group" aria-label="Acciones de formulario">
-            <button type="submit" class="boton-enviar" aria-controls="formulario-contacto" aria-label="Enviar mensaje" aria-pressed="false">ENVIAR MENSAJE</button>
-            <button type="reset" class="boton-limpiar" aria-label="Limpiar formulario" aria-pressed="false">LIMPIAR</button>
+            <button type="submit" class="boton-enviar" aria-controls="formulario-contacto" aria-label="Enviar mensaje"
+              aria-pressed="false">ENVIAR MENSAJE</button>
+            <button type="reset" class="boton-limpiar" aria-label="Limpiar formulario"
+              aria-pressed="false">LIMPIAR</button>
           </div>
         </div>
       </section>
@@ -144,9 +198,7 @@
             <li><span aria-hidden="true">📞</span> Teléfono: <a href="tel:+34900000000">+34 900 000 000</a></li>
             <li>
               <span aria-hidden="true">📧</span> Email:
-              <a href="mailto:soporte@vendemostucoche.com"
-                >soporte@vendemostucoche.com</a
-              >
+              <a href="mailto:soporte@vendemostucoche.com">soporte@vendemostucoche.com</a>
             </li>
             <li><span aria-hidden="true">💬</span> WhatsApp: <a href="#">Habla con un asesor</a></li>
             <li><span aria-hidden="true">🕓</span> Horario: Lunes a Viernes, 9:00 – 18:00</li>
@@ -165,7 +217,10 @@
           <!-- Mapa -->
           <div id="mapa" class="mapa" role="region" aria-labelledby="mapa-titulo">
             <h3 id="mapa-titulo" class="sr-only">Mapa de ubicación</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23243.315206177303!2d-2.95636911797587!3d43.26369344569817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4e27664b89b9%3A0x6534acc41e95a645!2sBilbao%2C%20Vizcaya!5e0!3m2!1ses!2ses!4v1762723156751!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="localizacionMapa" aria-label="Mapa de la oficina central" role="application"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23243.315206177303!2d-2.95636911797587!3d43.26369344569817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4e27664b89b9%3A0x6534acc41e95a645!2sBilbao%2C%20Vizcaya!5e0!3m2!1ses!2ses!4v1762723156751!5m2!1ses!2ses"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="localizacionMapa"
+              aria-label="Mapa de la oficina central" role="application"></iframe>
           </div>
 
           <!-- Información -->
@@ -178,88 +233,90 @@
             <p>🕓 Lunes a Viernes, 9:00 – 18:00</p>
 
             <div class="botones-localizacion" role="group" aria-label="Controles de localización">
-              <button id="boton-ubicacion" class="boton-enviar" aria-controls="resultado-ubicacion" aria-live="polite">Detectar mi ubicación</button>
-              <a
-                href="https://www.google.com/maps/dir/?api=1&destination=Av.+de+la+Empresa+12+Madrid"
-                target="_blank"
-                class="boton-como-llegar"
-                >Cómo llegar</a
-              >
+              <button id="boton-ubicacion" class="boton-enviar" aria-controls="resultado-ubicacion"
+                aria-live="polite">Detectar mi ubicación</button>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+de+la+Empresa+12+Madrid" target="_blank"
+                class="boton-como-llegar">Cómo llegar</a>
             </div>
 
-            <div id="resultado-ubicacion" class="resultado-ubicacion" role="status" aria-live="polite" aria-atomic="true"></div>
+            <div id="resultado-ubicacion" class="resultado-ubicacion" role="status" aria-live="polite"
+              aria-atomic="true"></div>
           </aside>
         </div>
       </section>
     </main>
     <!-- Pie de página -->
-    <footer class="footer" role="contentinfo" aria-label="Información del pie de página">
-      <div class="footer-contenido">
-        <section class="footer-soporte" role="region" aria-labelledby="soporte-h3">
-          <h3 id="soporte-h3">¿Necesitas ayuda?</h3>
-          <p>
-            Estamos aquí para resolver tus dudas y acompañarte durante todo el
-            proceso.
-          </p>
+    <!-- La clase 'w-100' asegura que el fondo azul oscuro cubra toda la pantalla -->
+    <footer class="footer bg-dark-custom w-100 py-5 mt-5" role="contentinfo">
 
-          <ul class="footer-contacto">
-            <li>
-              <span aria-hidden="true">📞</span> <strong>Teléfono / WhatsApp:</strong>
-              <a href="tel:+34900000000">+34 900 000 000</a>
-            </li>
-            <li>
-              <span aria-hidden="true">📧</span> <strong>Email:</strong>
-              <a href="mailto:soporte@vendemostucoche.com"
-                >soporte@vendemostucoche.com</a
-              >
-            </li>
-            <li>🕓 <strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
-          </ul>
-        </section>
+      <!-- 'container-fluid' permite que el contenido se expanda, px-md-5 da margen interno -->
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row gy-4 align-items-start">
 
-        <!-- Redes sociales -->
-        <section title="Redes Sociales" class="footer-redes" role="region" aria-labelledby="redes-h2">
-          <h2 id="redes-h2" class="sr-only">Nuestras Redes sociales</h2>
-          <a
-            href="https://www.facebook.com/VendemosTuCoche"
-            target="_blank"
-            aria-label="Facebook"
-          >
-            <img src="./images/icon/Facebook.svg" alt="Facebook" >
-          </a>
-          <a
-            href="https://www.twitter.com/VendemosTuCoche"
-            target="_blank"
-            aria-label="Twitter"
-          >
-            <img src="./images/icon/X.svg" alt="Twitter" >
-          </a>
-          <a
-            href="https://www.instagram.com/VendemosTuCoche"
-            target="_blank"
-            aria-label="Instagram"
-          >
-            <img src="./images/icon/Instagram.svg" alt="Insta" >
-          </a>
-          <a
-            href="https://www.linkedin.com/company/VendemosTuCoche"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <img src="./images/icon/Linkedin.svg" alt="Linkedin" >
-          </a>
-        </section>
+          <!-- Bloque 1: Soporte -->
+          <section class="col-12 col-md-8" aria-labelledby="footer-soporte-heading">
+            <h3 id="footer-soporte-heading" class="h5 text-white mb-3">¿Necesitas ayuda?</h3>
+            <p class="text-muted-custom mb-4">
+              Estamos aquí para resolver tus dudas y acompañarte durante todo el proceso.
+            </p>
 
-        <section class="footer-info" role="region" aria-labelledby="copyright-h2">
-          <h2 id="copyright-h2">© 2025 VendemosTuCoche</h2>
-          <p>Transacciones seguras, rápidas y sin estrés.</p>
-          <nav class="footer-nav" role="navigation" aria-label="Navegación del pie de página">
-            <a href="aviso-legal.html">Aviso legal</a>
-            <a href="privacidad.html">Privacidad</a>
-            <a href="cookies.html">Cookies</a>
-          </nav>
-        </section>
+            <ul class="list-unstyled footer-contacto" role="list">
+              <li class="mb-2">
+                <span class="me-2">📞</span><strong>Teléfono / WhatsApp:</strong>
+                <a href="tel:+34900000000" class="link-custom ms-1">+34 900 000 000</a>
+              </li>
+              <li class="mb-2">
+                <span class="me-2">📧</span><strong>Email:</strong>
+                <a href="mailto:soporte@vendemostucoche.com" class="link-custom ms-1">soporte@vendemostucoche.com</a>
+              </li>
+              <li class="mb-2"><span class="me-2">🕓</span><strong>Horario:</strong> Lunes a viernes, 9:00 – 18:00</li>
+            </ul>
+          </section>
+
+          <!-- Bloque 2: Redes Sociales -->
+          <section class="col-12 col-md-4 text-md-end" aria-labelledby="redes-heading">
+            <h2 id="redes-heading" class="h6 text-white text-uppercase mb-3">Nuestras Redes</h2>
+            <!-- d-flex justify-content-md-end alinea a la derecha solo en PC -->
+            <div class="d-flex justify-content-start justify-content-md-end gap-3">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <img src="./images/icon/Facebook.svg" alt="Facebook" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter">
+                <img src="./images/icon/X.svg" alt="Twitter" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <img src="./images/icon/Instagram.svg" alt="Instagram" width="24" height="24">
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">
+                <img src="./images/icon/Linkedin.svg" alt="Linkedin" width="24" height="24">
+              </a>
+            </div>
+          </section>
+
+          <!-- Bloque 3: Copyright y Legal (Ancho total) -->
+          <div class="col-12 border-top border-secondary pt-4 mt-5 text-center">
+            <section class="footer-info">
+              <h2 class="h6 fw-bold text-white mb-1">© 2026 VendemosTuCoche</h2>
+              <p class="small text-muted-custom">Transacciones seguras, rápidas y sin estrés.</p>
+              <nav class="d-flex justify-content-center flex-wrap gap-3 mt-3" aria-label="Enlaces legales">
+                <a href="aviso-legal.html" class="link-custom small">Aviso legal</a>
+                <a href="privacidad.html" class="link-custom small">Privacidad</a>
+                <a href="cookies.html" class="link-custom small">Cookies</a>
+              </nav>
+            </section>
+          </div>
+
+        </div>
       </div>
     </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5.3 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
   </body>
+
 </html>

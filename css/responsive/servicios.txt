@@ -1,6 +1,6 @@
 /* ===== RESPONSIVE SERVICIOS - HEADER FIXED ===== */
 
-@media (max-width: 912px) and (min-width: 768px) {
+@media (max-width: 1023px) and (min-width: 768px) {
   #servicios-body {
     display: block;
     padding: 0;
