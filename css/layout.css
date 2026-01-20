@@ -22,7 +22,7 @@ body {
 /* --- Estilo del botón e inversión --- */
 .custom-theme-btn {
   transition: all 0.3s ease;
-  background-color: #ff5300; /* El fondo del botón es el color del texto de la página */
+  background-color: #7f2200; /* El fondo del botón es el color del texto de la página */
   color: #ffffff;             /* El texto del botón es el fondo de la página */
   border: 2px solid #f8fafc;
 }
