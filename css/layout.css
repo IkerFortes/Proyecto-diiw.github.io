@@ -3,7 +3,37 @@
     --color-petroleo: #2c3e50; /* Tu color de fondo */
     --altura-encabezado: 6rem; /* Altura que usas */
     --color-linea-vertical: #C44601; /* El color naranja para las líneas */
+      --bg-page: #ffffff;
+  --text-page: #212529;
 }
+
+
+[data-theme="dark"] {
+  --bg-page: #121212;
+  --text-page: #000000;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-page);
+  transition: background 0.3s;
+}
+
+/* --- Estilo del botón e inversión --- */
+.custom-theme-btn {
+  transition: all 0.3s ease;
+  background-color: #ff5300; /* El fondo del botón es el color del texto de la página */
+  color: #ffffff;             /* El texto del botón es el fondo de la página */
+  border: 2px solid #f8fafc;
+}
+
+.custom-theme-btn:hover {
+  /* Inversión total al pasar el ratón */
+  background-color: var(--bg-page) !important;
+  color: var(--text-page) !important;
+  border-color: var(--text-page);
+}
+
 
 /* ===== HEADER ===== */
 header {

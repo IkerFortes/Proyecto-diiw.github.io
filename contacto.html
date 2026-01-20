@@ -36,6 +36,12 @@
           </div>
         </a>
 
+        <!-- El aria-pressed indica el estado del interruptor a los lectores de pantalla -->
+        <button id="theme-toggle" class="btn btn-outline-info custom-theme-btn" aria-pressed="false"
+          aria-label="Alternar modo oscuro">
+          <span>Modo Oscuro</span>
+        </button>
+
         <!-- CONTENEDOR DERECHO: Usuario y Botón Hamburguesa (ms-auto empuja a la derecha) -->
         <div class="d-flex align-items-center ms-auto">
 
@@ -312,6 +318,9 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Script para cambiar de tema -->
+    <script src="./js/cambiarColor.js"></script>
 
     <!-- Bootstrap 5.3 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
