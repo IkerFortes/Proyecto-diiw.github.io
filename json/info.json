@@ -1,0 +1,59 @@
+ {
+        "@context": "https://schema.org",
+        "@type": "AutoBroker",
+        "name": "Vendemos Tu Coche",
+        "description": "Plataforma estilo Vinted para la compra y venta de vehículos de forma rápida, segura y transparente.",
+        "url": "https://tuweb.com",
+        "logo": "https://tuweb.com",
+        "image": "https://tuweb.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vitoria-Gasteiz",
+          "addressCountry": "ES"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Automoción",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Venta de coches entre particulares"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Financiación de vehículos"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gestión de Garantía"
+              }
+            }
+          ]
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Es seguro vender mi coche en Vendemos Tu Coche?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, contamos con procesos 100% seguros, asesoría personalizada y verificación de todos los vehículos en la plataforma."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Ofrecéis financiación?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, disponemos de servicios de financiación a medida para que puedas comprar tu coche con total comodidad."
+            }
+          }
+        ]
+      }
