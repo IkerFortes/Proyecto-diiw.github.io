@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org">
+  <!-- Página principal -->
+  <url>
+    <loc>https://ikerfortes.github.io</loc>
+    <lastmod>2026-01-26</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <!-- Página de servicios -->
+  <url>
+    <loc>https://ikerfortes.github.io</loc>
+    <lastmod>2026-01-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Página de mantenimiento -->
+  <url>
+    <loc>https://ikerfortes.github.io</loc>
+    <lastmod>2026-01-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Página de contacto -->
+  <url>
+    <loc>https://ikerfortes.github.io</loc>
+    <lastmod>2026-01-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>
